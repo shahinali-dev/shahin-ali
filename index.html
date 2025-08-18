@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <title>Shahin Ali</title>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header>
+      <!-- Navigation -->
+      <nav
+        class="fixed top-0 w-full bg-white/80 dark:bg-dark-900/80 glass-effect z-50 shadow-lg dark:shadow-dark-800/50 transition-all duration-300"
+        role="navigation"
+        aria-label="Main Navigation"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center py-4">
+            <!-- Brand/Logo -->
+            <h1 class="text-2xl font-bold">
+              <a
+                href="#home"
+                class="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent animate-pulse-slow"
+              >
+                &lt;Shahin Ali /&gt;
+              </a>
+            </h1>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8">
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#experience" class="nav-link">Experience</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center space-x-4">
+              <!-- Theme Toggle -->
+              <button
+                id="theme-toggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-dark-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-dark-700 transition-all duration-300 hover:scale-110"
+                aria-label="Toggle Dark/Light Mode"
+              >
+                <svg
+                  id="theme-toggle-dark-icon"
+                  class="hidden w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+                <svg
+                  id="theme-toggle-light-icon"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10 2L13.09 8.26L20 9L14 14.74L15.18 21.02L10 17.77L4.82 21.02L6 14.74L0 9L6.91 8.26L10 2Z"
+                  ></path>
+                </svg>
+              </button>
+
+              <!-- Mobile Menu Button -->
+              <button
+                id="mobile-menu-btn"
+                class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-dark-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-dark-700 transition-all duration-300"
+                aria-label="Open mobile menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden bg-white/95 dark:bg-dark-900/95 glass-effect border-t dark:border-dark-800"
+        >
+          <ul class="px-2 pt-2 pb-3 space-y-1">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li>
+              <a href="#experience" class="mobile-nav-link">Experience</a>
+            </li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- External JavaScript -->
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
