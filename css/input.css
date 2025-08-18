@@ -192,6 +192,13 @@
   }
 }
 
+@layer utilities {
+  .container {
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+}
+
 @layer components {
   /* card effect  */
   .card-hover {
