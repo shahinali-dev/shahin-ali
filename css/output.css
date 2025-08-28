@@ -450,6 +450,9 @@
   .order-2 {
     order: 2;
   }
+  .col-span-12 {
+    grid-column: span 12 / span 12;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
