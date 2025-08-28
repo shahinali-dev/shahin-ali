@@ -708,7 +708,7 @@
             <div class="lg:col-span-7 space-y-10">
               <!-- Profile Card -->
               <article
-                class="scroll-reveal about-card bg-white dark:bg-gray-800 rounded-3xl shadow-2xl dark:shadow-black/40 p-8 sm:p-10 border-l-4 border-primary-500 dark:border-primary-600"
+                class="scroll-reveal about-card bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl shadow-2xl dark:shadow-black/40 p-8 sm:p-10 border-l-4 border-primary-500 dark:border-primary-600"
                 aria-labelledby="profile-heading"
               >
                 <header
@@ -1176,17 +1176,36 @@
 
                 <!-- Tech Grid -->
                 <ul
-                  class="grid grid-cols-2 sm:grid-cols-3 gap-8 mt-8 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-secondary-50/50 before:to-transparent dark:before:from-secondary-900/10 dark:before:to-transparent before:rounded-xl before:-z-10"
+                  class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-8 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-secondary-50/50 before:to-transparent dark:before:from-secondary-900/10 dark:before:to-transparent before:rounded-xl before:-z-10"
                   role="list"
                 >
-                  <!-- React -->
+                  <!-- TypeScript -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-blue-50 dark:bg-blue-900/30 rounded-xl border border-blue-200 dark:border-blue-700 transition-all duration-300 shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
+                    >
+                      <div
+                        class="bg-blue-100 dark:bg-blue-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-[#3178C6] dark:text-[#60A5FA]"
+                          >TS</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >TypeScript</span
+                      >
+                    </div>
+                  </li>
+
                   <!-- React -->
                   <li class="group" role="listitem">
                     <div
-                      class="flex flex-col items-center p-16 bg-white dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-700 transition-all duration-300 h-full shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-white dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-700 transition-all duration-300 h- shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
                     >
                       <div
-                        class="w-16 h-16 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                        class="bg-blue-100 dark:bg-blue-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
                       >
                         <i
                           class="fab fa-react text-2xl text-[#61DAFB]"
@@ -1203,10 +1222,10 @@
                   <!-- Next.js -->
                   <li class="group" role="listitem">
                     <div
-                      class="flex flex-col items-center p-6 bg-white dark:bg-gray-700/50 rounded-xl border border-gray-200 dark:border-gray-600 transition-all duration-300 h-full shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-600 transition-all duration-300 shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
                     >
                       <div
-                        class="w-16 h-16 bg-gray-100 dark:bg-gray-700/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                        class="bg-gray-100 dark:bg-gray-700/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
                       >
                         <span
                           class="text-lg font-bold text-black dark:text-white"
@@ -1223,10 +1242,10 @@
                   <!-- Node.js -->
                   <li class="group" role="listitem">
                     <div
-                      class="flex flex-col items-center p-6 bg-white dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700 transition-all duration-300 h-full shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700 transition-all duration-300 shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
                     >
                       <div
-                        class="w-16 h-16 bg-green-100 dark:bg-green-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                        class="bg-green-100 dark:bg-green-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
                       >
                         <i
                           class="fab fa-node-js text-2xl text-[#339933]"
@@ -1243,13 +1262,13 @@
                   <!-- Express -->
                   <li class="group" role="listitem">
                     <div
-                      class="flex flex-col items-center p-6 bg-red-50 dark:bg-red-900/30 rounded-xl border-2 border-red-200 dark:border-red-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-gray-50 dark:bg-gray-900/30 rounded-xl border border-gray-300 dark:border-gray-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
                       <div
-                        class="w-16 h-16 bg-red-100 dark:bg-red-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                        class="bg-gray-200 dark:bg-gray-700 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
                       >
                         <span
-                          class="text-lg font-bold text-[#E53E3E] dark:text-[#FC8181]"
+                          class="text-lg font-bold text-gray-700 dark:text-gray-300"
                           >Ex</span
                         >
                       </div>
@@ -1263,10 +1282,10 @@
                   <!-- Nest.js -->
                   <li class="group" role="listitem">
                     <div
-                      class="flex flex-col items-center p-6 bg-red-50 dark:bg-red-900/30 rounded-xl border-2 border-red-200 dark:border-red-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-red-50 dark:bg-red-900/30 rounded-xl border-2 border-red-200 dark:border-red-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
                       <div
-                        class="w-16 h-16 bg-red-100 dark:bg-red-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                        class="bg-red-100 dark:bg-red-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
                       >
                         <span
                           class="text-lg font-bold text-[#E0234E] dark:text-[#FF6B81]"
@@ -1280,33 +1299,13 @@
                     </div>
                   </li>
 
-                  <!-- MongoDB -->
-                  <li class="group" role="listitem">
-                    <div
-                      class="flex flex-col items-center p-6 bg-green-50 dark:bg-green-900/30 rounded-xl border-2 border-green-200 dark:border-green-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
-                    >
-                      <div
-                        class="w-16 h-16 bg-green-100 dark:bg-green-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-[#4DB33D] dark:text-[#68D391]"
-                          >M</span
-                        >
-                      </div>
-                      <span
-                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
-                        >MongoDB</span
-                      >
-                    </div>
-                  </li>
-
                   <!-- PostgreSQL -->
                   <li class="group" role="listitem">
                     <div
-                      class="flex flex-col items-center p-6 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl border-2 border-indigo-200 dark:border-indigo-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-indigo-50 dark:bg-indigo-900/30 rounded-xl border-2 border-indigo-200 dark:border-indigo-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
                       <div
-                        class="w-16 h-16 bg-indigo-100 dark:bg-indigo-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                        class="bg-indigo-100 dark:bg-indigo-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
                       >
                         <span
                           class="text-lg font-bold text-[#336791] dark:text-[#A3BFFA]"
@@ -1320,13 +1319,33 @@
                     </div>
                   </li>
 
+                  <!-- MongoDB -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-green-50 dark:bg-green-900/30 rounded-xl border-2 border-green-200 dark:border-green-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="bg-green-100 dark:bg-green-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-[#4DB33D] dark:text-[#68D391]"
+                          >M</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >MongoDB</span
+                      >
+                    </div>
+                  </li>
+
                   <!-- LangChain -->
                   <li class="group" role="listitem">
                     <div
-                      class="flex flex-col items-center p-6 bg-purple-50 dark:bg-purple-900/30 rounded-xl border-2 border-purple-200 dark:border-purple-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                      class="flex px-8 py-3 gap-2 items-center justify-center bg-purple-50 dark:bg-purple-900/30 rounded-xl border-2 border-purple-200 dark:border-purple-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
                       <div
-                        class="w-16 h-16 bg-purple-100 dark:bg-purple-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                        class="bg-purple-100 dark:bg-purple-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
                       >
                         <span
                           class="text-lg font-bold text-[#9F7AEA] dark:text-[#B794F4]"
@@ -1340,28 +1359,6 @@
                     </div>
                   </li>
                 </ul>
-
-                <div class="mt-10 flex justify-center">
-                  <a
-                    href="#skills"
-                    class="inline-flex items-center text-white font-medium transition-all duration-300 px-6 py-3 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 dark:from-primary-600 dark:to-secondary-600 dark:hover:from-primary-500 dark:hover:to-secondary-500 shadow-md hover:shadow-lg transform hover:scale-105"
-                  >
-                    View all technologies
-                    <svg
-                      class="w-4 h-4 ml-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
               </section>
 
               <!-- Professional Attributes -->
