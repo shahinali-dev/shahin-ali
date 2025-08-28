@@ -656,21 +656,26 @@
       <!-- About Section -->
       <section
         id="about"
-        class="py-20 bg-white dark:bg-dark-800 transition-colors duration-300 relative overflow-hidden"
+        class="py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden"
         aria-labelledby="about-heading"
-        role="region"
       >
-        <!-- Background Elements (decorative, so hidden) -->
+        <!-- Background Elements (decorative) -->
         <div class="absolute inset-0" aria-hidden="true">
+          <!-- Modern gradient shapes -->
           <div
-            class="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-primary-200/30 to-secondary-200/30 rounded-full blur-xl animate-float"
+            class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-primary-500/15 to-secondary-500/15 dark:from-primary-400/15 dark:to-secondary-400/15 rounded-full blur-3xl"
+            style="animation: float 6s ease-in-out infinite"
           ></div>
           <div
-            class="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-r from-accent-200/30 to-primary-200/30 rounded-full blur-xl animate-float"
-            style="animation-delay: 2s"
+            class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-secondary-500/15 to-accent-500/15 dark:from-secondary-400/15 dark:to-accent-400/15 rounded-full blur-3xl"
+            style="animation: float 6s ease-in-out infinite 2s"
+          ></div>
+          <!-- Geometric accent shapes -->
+          <div
+            class="absolute top-40 right-1/4 w-24 h-24 border-2 border-primary-400/20 rounded-xl rotate-12 animate-spin-slow"
           ></div>
           <div
-            class="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-r from-secondary-200/30 to-accent-200/30 rounded-full blur-xl animate-pulse"
+            class="absolute bottom-40 left-1/4 w-16 h-16 border-2 border-secondary-400/20 rounded-full animate-bounce-slow"
           ></div>
         </div>
 
@@ -681,258 +686,773 @@
               id="about-heading"
               class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6"
             >
-              About <span class="text-gradient">Me</span>
+              About
+              <span class="text-gradient">Me</span>
             </h2>
             <div
-              class="w-32 h-1.5 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 mx-auto mb-6 rounded-full"
+              class="w-40 h-2 bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 dark:from-primary-500 dark:via-secondary-500 dark:to-accent-500 mx-auto mb-8 rounded-full"
               aria-hidden="true"
             ></div>
             <p
-              class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+              class="text-xl text-gray-800 dark:text-gray-200 max-w-3xl mx-auto font-medium"
             >
-              Passionate developer crafting digital experiences with modern
-              technologies
+              Building powerful full-stack applications with cutting-edge
+              technologies and innovative solutions
             </p>
           </header>
 
-          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <!-- Left Content -->
-            <article class="scroll-reveal" aria-labelledby="role-heading">
-              <div class="about-card p-8 lg:p-10 rounded-3xl">
-                <div class="space-y-6">
-                  <header class="flex items-center space-x-4 mb-6">
+          <!-- Main Content -->
+          <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 mt-12">
+            <!-- Left Column: Profile & Journey - 7 columns wide on large screens -->
+            <div class="lg:col-span-7 space-y-10">
+              <!-- Profile Card -->
+              <article
+                class="scroll-reveal about-card bg-white dark:bg-gray-800 rounded-3xl shadow-xl dark:shadow-black/30 p-8 sm:p-10 border-2 border-gray-200 dark:border-gray-700"
+                aria-labelledby="profile-heading"
+              >
+                <header
+                  class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6"
+                >
+                  <div class="relative">
                     <div
-                      class="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center"
-                      aria-hidden="true"
+                      class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center shadow-lg"
                     >
                       <svg
-                        class="w-8 h-8 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
+                        class="w-10 h-10 text-white drop-shadow-md"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                         aria-hidden="true"
                       >
                         <path
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                         ></path>
                       </svg>
                     </div>
-                    <div>
-                      <h3
-                        id="role-heading"
-                        class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white"
+                    <!-- Status indicator -->
+                    <span
+                      class="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 border-2 border-white dark:border-dark-700 rounded-full flex items-center justify-center"
+                      aria-hidden="true"
+                    >
+                      <svg
+                        class="w-3 h-3 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
                       >
-                        Full Stack Developer
-                      </h3>
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div class="flex-1">
+                    <h3
+                      id="profile-heading"
+                      class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white"
+                    >
+                      Full Stack Engineer
+                    </h3>
+                    <div class="flex flex-wrap items-center gap-2 mt-2">
                       <p
                         class="text-primary-600 dark:text-primary-400 font-medium"
                       >
-                        & Tech Enthusiast
+                        @ Minimatic Solutions
+                      </p>
+                      <span
+                        class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600"
+                        aria-hidden="true"
+                      ></span>
+                      <p class="text-gray-600 dark:text-gray-400 font-medium">
+                        Available for new opportunities
                       </p>
                     </div>
-                  </header>
+                  </div>
+                </header>
 
+                <div class="space-y-6">
                   <p
-                    class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg"
+                    class="text-gray-800 dark:text-gray-200 leading-relaxed text-lg"
                   >
-                    I'm a passionate full-stack web developer currently working
-                    at
+                    I'm a passionate full-stack engineer with
                     <span
-                      class="font-semibold text-primary-600 dark:text-primary-400"
-                      >Minimatic Solution</span
-                    >. I specialize in modern JavaScript technologies and love
-                    building scalable web applications that solve real-world
-                    problems.
-                  </p>
-
-                  <p
-                    class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg"
-                  >
-                    With expertise in both frontend and backend development, I
-                    create end-to-end solutions using React, Next.js, Node.js,
-                    and various databases. I'm always eager to learn new
-                    technologies and improve my skills.
-                  </p>
-
-                  <!-- Small Stats -->
-                  <section
-                    class="grid grid-cols-2 gap-4 mt-8"
-                    aria-label="Experience Highlights"
-                  >
-                    <div
-                      class="text-center p-4 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-2xl"
-                      role="group"
-                      aria-label="1.5+ Years Learning"
+                      class="font-semibold text-primary-700 dark:text-primary-400"
+                      >3+ years</span
                     >
-                      <div
-                        class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1"
-                      >
-                        1.5+
-                      </div>
-                      <p class="text-sm text-gray-600 dark:text-gray-300">
-                        Years Learning
-                      </p>
-                    </div>
-                    <div
-                      class="text-center p-4 bg-gradient-to-r from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 rounded-2xl"
-                      role="group"
-                      aria-label="10+ Projects Built"
-                    >
-                      <div
-                        class="text-2xl font-bold text-secondary-600 dark:text-secondary-400 mb-1"
-                      >
-                        10+
-                      </div>
-                      <p class="text-sm text-gray-600 dark:text-gray-300">
-                        Projects Built
-                      </p>
-                    </div>
-                  </section>
-
-                  <!-- Tags -->
-                  <footer
-                    class="flex flex-wrap gap-3 mt-6"
-                    aria-label="Personal Skills"
-                  >
+                    of professional experience crafting modern web applications.
+                    My expertise spans the entire development stack including
                     <span
-                      class="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium"
-                      role="listitem"
-                      >Problem Solver</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-secondary-100 dark:bg-secondary-900/30 text-secondary-600 dark:text-secondary-400 rounded-full text-sm font-medium"
-                      role="listitem"
-                      >Team Player</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 rounded-full text-sm font-medium"
-                      role="listitem"
-                      >Quick Learner</span
-                    >
-                  </footer>
-                </div>
-              </div>
-            </article>
-
-            <!-- Right Content -->
-            <aside
-              class="scroll-reveal"
-              aria-label="Professional Stats and Skills"
-            >
-              <!-- Stats Cards -->
-              <section
-                class="grid grid-cols-2 gap-6"
-                aria-label="Performance Stats"
-              >
-                <article
-                  class="stats-card p-6 rounded-2xl text-white text-center relative"
-                  aria-label="15+ Technologies"
-                >
-                  <div class="stats-content">
-                    <div class="text-3xl lg:text-4xl font-bold mb-2">15+</div>
-                    <p class="text-sm opacity-90">Technologies</p>
-                  </div>
-                </article>
-                <article
-                  class="stats-card p-6 rounded-2xl text-white text-center relative"
-                  style="animation-delay: 0.2s"
-                  aria-label="100% Dedication"
-                >
-                  <div class="stats-content">
-                    <div class="text-3xl lg:text-4xl font-bold mb-2">100%</div>
-                    <p class="text-sm opacity-90">Dedication</p>
-                  </div>
-                </article>
-                <article
-                  class="stats-card p-6 rounded-2xl text-white text-center relative"
-                  style="animation-delay: 0.4s"
-                  aria-label="24/7 Learning"
-                >
-                  <div class="stats-content">
-                    <div class="text-3xl lg:text-4xl font-bold mb-2">24/7</div>
-                    <p class="text-sm opacity-90">Learning</p>
-                  </div>
-                </article>
-                <article
-                  class="stats-card p-6 rounded-2xl text-white text-center relative"
-                  style="animation-delay: 0.6s"
-                  aria-label="Infinite Possibilities"
-                >
-                  <div class="stats-content">
-                    <div class="text-3xl lg:text-4xl font-bold mb-2">∞</div>
-                    <p class="text-sm opacity-90">Possibilities</p>
-                  </div>
-                </article>
-              </section>
-
-              <!-- Skills Preview -->
-              <section
-                class="mt-8 p-6 bg-gray-50 dark:bg-dark-700 rounded-2xl"
-                aria-labelledby="skills-heading"
-              >
-                <h4
-                  id="skills-heading"
-                  class="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center"
-                >
-                  Core Technologies
-                </h4>
-                <ul class="grid grid-cols-4 gap-4" role="list">
-                  <li class="text-center" role="listitem">
-                    <div
-                      class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-2"
-                      aria-hidden="true"
-                    >
-                      <span class="text-blue-600 dark:text-blue-400 font-bold"
-                        >R</span
-                      >
-                    </div>
-                    <span class="text-xs text-gray-600 dark:text-gray-300"
+                      class="font-semibold text-secondary-700 dark:text-secondary-400"
                       >React</span
-                    >
-                  </li>
-                  <li class="text-center" role="listitem">
-                    <div
-                      class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-2"
-                      aria-hidden="true"
-                    >
-                      <span class="text-green-600 dark:text-green-400 font-bold"
-                        >N</span
-                      >
-                    </div>
-                    <span class="text-xs text-gray-600 dark:text-gray-300"
+                    >,
+                    <span
+                      class="font-semibold text-secondary-700 dark:text-secondary-400"
+                      >Next.js</span
+                    >,
+                    <span
+                      class="font-semibold text-secondary-700 dark:text-secondary-400"
                       >Node.js</span
-                    >
-                  </li>
-                  <li class="text-center" role="listitem">
-                    <div
-                      class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-xl flex items-center justify-center mx-auto mb-2"
-                      aria-hidden="true"
-                    >
-                      <span
-                        class="text-yellow-600 dark:text-yellow-400 font-bold"
-                        >JS</span
-                      >
-                    </div>
-                    <span class="text-xs text-gray-600 dark:text-gray-300"
-                      >JavaScript</span
-                    >
-                  </li>
-                  <li class="text-center" role="listitem">
-                    <div
-                      class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mx-auto mb-2"
-                      aria-hidden="true"
-                    >
-                      <span
-                        class="text-purple-600 dark:text-purple-400 font-bold"
-                        >M</span
-                      >
-                    </div>
-                    <span class="text-xs text-gray-600 dark:text-gray-300"
+                    >,
+                    <span
+                      class="font-semibold text-secondary-700 dark:text-secondary-400"
+                      >Express</span
+                    >,
+                    <span
+                      class="font-semibold text-secondary-700 dark:text-secondary-400"
+                      >Nest.js</span
+                    >,
+                    <span
+                      class="font-semibold text-secondary-700 dark:text-secondary-400"
                       >MongoDB</span
+                    >, and
+                    <span
+                      class="font-semibold text-secondary-700 dark:text-secondary-400"
+                      >PostgreSQL</span
+                    >.
+                  </p>
+
+                  <p
+                    class="text-gray-800 dark:text-gray-200 leading-relaxed text-lg"
+                  >
+                    I've built numerous real-time applications and integrated AI
+                    capabilities using
+                    <span
+                      class="font-semibold text-primary-700 dark:text-primary-400"
+                      >LangChain</span
                     >
+                    for advanced chatbots. My approach combines deep technical
+                    knowledge with creative problem-solving to build scalable,
+                    user-focused applications that deliver exceptional
+                    experiences. I bridge the gap between frontend and backend
+                    development to create cohesive, end-to-end solutions.
+                  </p>
+                </div>
+
+                <!-- Key Metrics -->
+                <ul
+                  class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10 pb-2"
+                  aria-label="Professional Achievements"
+                >
+                  <li class="group">
+                    <a
+                      href="#experience"
+                      class="block p-6 bg-gray-100 dark:bg-gray-700 rounded-2xl hover:bg-primary-100 dark:hover:bg-primary-800/50 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center text-center h-full"
+                      >
+                        <span
+                          class="text-3xl font-bold text-primary-700 dark:text-primary-300 group-hover:scale-110 transition-transform duration-300"
+                          >3+</span
+                        >
+                        <span
+                          class="text-sm text-gray-600 dark:text-gray-400 mt-1"
+                          >Years Experience</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="#projects"
+                      class="block p-6 bg-gray-100 dark:bg-gray-700 rounded-2xl hover:bg-secondary-100 dark:hover:bg-secondary-800/50 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center text-center h-full"
+                      >
+                        <span
+                          class="text-3xl font-bold text-secondary-700 dark:text-secondary-300 group-hover:scale-110 transition-transform duration-300"
+                          >25+</span
+                        >
+                        <span
+                          class="text-sm text-gray-600 dark:text-gray-400 mt-1"
+                          >Projects Built</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="#skills"
+                      class="block p-6 bg-gray-100 dark:bg-gray-700 rounded-2xl hover:bg-accent-100 dark:hover:bg-accent-800/50 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center text-center h-full"
+                      >
+                        <span
+                          class="text-3xl font-bold text-accent-700 dark:text-accent-300 group-hover:scale-110 transition-transform duration-300"
+                          >15+</span
+                        >
+                        <span
+                          class="text-sm text-gray-600 dark:text-gray-400 mt-1"
+                          >Technologies</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <div
+                      class="p-6 bg-gray-100 dark:bg-gray-700 rounded-2xl h-full shadow-sm"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center text-center h-full"
+                      >
+                        <span
+                          class="text-3xl font-bold text-gray-700 dark:text-gray-300 group-hover:scale-110 transition-transform duration-300"
+                          >100%</span
+                        >
+                        <span
+                          class="text-sm text-gray-600 dark:text-gray-400 mt-1"
+                          >Client Satisfaction</span
+                        >
+                      </div>
+                    </div>
                   </li>
                 </ul>
+              </article>
+
+              <!-- Development Philosophy -->
+              <article
+                class="scroll-reveal about-card bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-3xl border-2 border-gray-200 dark:border-gray-700 shadow-lg"
+                aria-labelledby="philosophy-heading"
+              >
+                <h3
+                  id="philosophy-heading"
+                  class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2"
+                >
+                  <svg
+                    class="w-5 h-5 text-primary-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  My Development Philosophy
+                </h3>
+
+                <div class="space-y-6 mt-6">
+                  <div class="flex items-start gap-4">
+                    <span
+                      class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center mt-0.5 shadow-sm"
+                    >
+                      <svg
+                        class="w-5 h-5 text-primary-700 dark:text-primary-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      <strong class="font-medium text-gray-900 dark:text-white"
+                        >User-Centric Design:</strong
+                      >
+                      I prioritize understanding user needs and creating
+                      intuitive interfaces that drive engagement and
+                      satisfaction.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <span
+                      class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-100 dark:bg-secondary-900/40 flex items-center justify-center mt-0.5 shadow-sm"
+                    >
+                      <svg
+                        class="w-5 h-5 text-secondary-700 dark:text-secondary-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      <strong class="font-medium text-gray-900 dark:text-white"
+                        >Full Stack Excellence:</strong
+                      >
+                      I bridge frontend and backend development to create
+                      cohesive, performant applications with seamless user
+                      experiences.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <span
+                      class="flex-shrink-0 w-12 h-12 rounded-full bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center mt-0.5 shadow-sm"
+                    >
+                      <svg
+                        class="w-5 h-5 text-accent-700 dark:text-accent-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      <strong class="font-medium text-gray-900 dark:text-white"
+                        >Innovation & AI Integration:</strong
+                      >
+                      I leverage AI technologies like LangChain to build
+                      intelligent, adaptive systems that provide enhanced value
+                      to users.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Real-time Applications Showcase -->
+              <article
+                class="scroll-reveal about-card bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-3xl border-2 border-gray-200 dark:border-gray-700 shadow-lg"
+                aria-labelledby="realtime-heading"
+              >
+                <h3
+                  id="realtime-heading"
+                  class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2"
+                >
+                  <svg
+                    class="w-5 h-5 text-accent-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Real-time Applications & AI Chatbots
+                </h3>
+
+                <div class="mt-8 space-y-8">
+                  <!-- Project 1 -->
+                  <div
+                    class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg border-2 border-gray-200 dark:border-gray-600 card-hover"
+                  >
+                    <div class="flex items-center gap-3 mb-3">
+                      <div
+                        class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                          ></path>
+                          <path
+                            d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-gray-900 dark:text-white"
+                      >
+                        LangChain Powered Chatbots
+                      </h4>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      Developed intelligent conversational agents using
+                      LangChain, integrating with large language models to
+                      create context-aware chat experiences with memory and
+                      custom knowledge bases.
+                    </p>
+                  </div>
+
+                  <!-- Project 2 -->
+                  <div
+                    class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg border-2 border-gray-200 dark:border-gray-600 card-hover"
+                  >
+                    <div class="flex items-center gap-3 mb-3">
+                      <div
+                        class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-gray-900 dark:text-white"
+                      >
+                        Real-time Collaboration Platforms
+                      </h4>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      Built multi-user collaborative applications with
+                      WebSockets for instant updates, supporting features like
+                      live document editing, real-time notifications, and
+                      interactive dashboards.
+                    </p>
+                  </div>
+
+                  <!-- Project 3 -->
+                  <div
+                    class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg border-2 border-gray-200 dark:border-gray-600 card-hover"
+                  >
+                    <div class="flex items-center gap-3 mb-3">
+                      <div
+                        class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-gray-900 dark:text-white"
+                      >
+                        Interactive Data Visualization
+                      </h4>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">
+                      Created dynamic analytics platforms with real-time data
+                      processing, enabling businesses to monitor metrics,
+                      visualize trends, and respond instantly to changing
+                      conditions.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Skills & Expertise - 5 columns wide on large screens -->
+            <div class="lg:col-span-5 space-y-10">
+              <!-- Core Tech Stack Card -->
+              <section
+                class="scroll-reveal about-card bg-white dark:bg-gray-800 rounded-3xl shadow-xl dark:shadow-black/30 p-8 sm:p-10 border-2 border-gray-200 dark:border-gray-700"
+                aria-labelledby="tech-stack-heading"
+              >
+                <h3
+                  id="tech-stack-heading"
+                  class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2"
+                >
+                  <svg
+                    class="w-5 h-5 text-secondary-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Core Tech Stack
+                </h3>
+
+                <!-- Tech Grid -->
+                <ul
+                  class="grid grid-cols-2 sm:grid-cols-3 gap-8 mt-8"
+                  role="list"
+                >
+                  <!-- React -->
+                  <!-- React -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-0 bg-blue-50 dark:bg-blue-900/30 rounded-xl border-2 border-blue-200 dark:border-blue-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <i
+                          class="fab fa-react text-2xl text-[#61DAFB]"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >React</span
+                      >
+                    </div>
+                  </li>
+
+                  <!-- Next.js -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-700/50 rounded-xl border-2 border-gray-200 dark:border-gray-600 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-gray-100 dark:bg-gray-700/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-black dark:text-white"
+                          >N</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >Next.js</span
+                      >
+                    </div>
+                  </li>
+
+                  <!-- Node.js -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-6 bg-green-50 dark:bg-green-900/30 rounded-xl border-2 border-green-200 dark:border-green-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-green-100 dark:bg-green-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <i
+                          class="fab fa-node-js text-2xl text-[#339933]"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >Node.js</span
+                      >
+                    </div>
+                  </li>
+
+                  <!-- Express -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-6 bg-red-50 dark:bg-red-900/30 rounded-xl border-2 border-red-200 dark:border-red-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-red-100 dark:bg-red-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-[#E53E3E] dark:text-[#FC8181]"
+                          >Ex</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >Express</span
+                      >
+                    </div>
+                  </li>
+
+                  <!-- Nest.js -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-6 bg-red-50 dark:bg-red-900/30 rounded-xl border-2 border-red-200 dark:border-red-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-red-100 dark:bg-red-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-[#E0234E] dark:text-[#FF6B81]"
+                          >N</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >Nest.js</span
+                      >
+                    </div>
+                  </li>
+
+                  <!-- MongoDB -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-6 bg-green-50 dark:bg-green-900/30 rounded-xl border-2 border-green-200 dark:border-green-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-green-100 dark:bg-green-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-[#4DB33D] dark:text-[#68D391]"
+                          >M</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >MongoDB</span
+                      >
+                    </div>
+                  </li>
+
+                  <!-- PostgreSQL -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-6 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl border-2 border-indigo-200 dark:border-indigo-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-indigo-100 dark:bg-indigo-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-[#336791] dark:text-[#A3BFFA]"
+                          >PG</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >PostgreSQL</span
+                      >
+                    </div>
+                  </li>
+
+                  <!-- LangChain -->
+                  <li class="group" role="listitem">
+                    <div
+                      class="flex flex-col items-center p-6 bg-purple-50 dark:bg-purple-900/30 rounded-xl border-2 border-purple-200 dark:border-purple-700 transition-all duration-300 h-full shadow-sm hover:shadow-md card-hover"
+                    >
+                      <div
+                        class="w-16 h-16 bg-purple-100 dark:bg-purple-800/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm"
+                      >
+                        <span
+                          class="text-lg font-bold text-[#9F7AEA] dark:text-[#B794F4]"
+                          >LC</span
+                        >
+                      </div>
+                      <span
+                        class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >LangChain</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="mt-8 flex justify-center">
+                  <a
+                    href="#skills"
+                    class="inline-flex items-center text-primary-700 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-200 font-medium transition-colors duration-300 px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-900/20 hover:bg-primary-100 dark:hover:bg-primary-800/30 shadow-sm"
+                  >
+                    View all technologies
+                    <svg
+                      class="w-4 h-4 ml-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
               </section>
-            </aside>
+
+              <!-- Professional Attributes -->
+              <section
+                class="scroll-reveal about-card bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-3xl border-2 border-gray-200 dark:border-gray-700 shadow-lg"
+                aria-labelledby="attributes-heading"
+              >
+                <h3
+                  id="attributes-heading"
+                  class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2"
+                >
+                  <svg
+                    class="w-5 h-5 text-secondary-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
+                  Professional Attributes
+                </h3>
+
+                <div class="flex flex-wrap gap-4 mt-6">
+                  <span
+                    class="px-6 py-3 bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:bg-primary-200 dark:hover:bg-primary-800/50"
+                    >Real-time Expert</span
+                  >
+                  <span
+                    class="px-6 py-3 bg-secondary-100 dark:bg-secondary-900/40 text-secondary-700 dark:text-secondary-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:bg-secondary-200 dark:hover:bg-secondary-800/50"
+                    >Team Player</span
+                  >
+                  <span
+                    class="px-6 py-3 bg-accent-100 dark:bg-accent-900/40 text-accent-700 dark:text-accent-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:bg-accent-200 dark:hover:bg-accent-800/50"
+                    >Quick Learner</span
+                  >
+                  <span
+                    class="px-6 py-3 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:bg-emerald-200 dark:hover:bg-emerald-800/50"
+                    >Detail-Oriented</span
+                  >
+                  <span
+                    class="px-6 py-3 bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:bg-purple-200 dark:hover:bg-purple-800/50"
+                    >Adaptive</span
+                  >
+                  <span
+                    class="px-6 py-3 bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:bg-amber-200 dark:hover:bg-amber-800/50"
+                    >AI Integration Specialist</span
+                  >
+                </div>
+              </section>
+
+              <!-- Call to Action -->
+              <section
+                class="scroll-reveal about-card bg-gradient-to-br from-primary-600 to-secondary-600 dark:from-primary-700 dark:to-secondary-700 p-8 sm:p-10 rounded-3xl shadow-xl text-white relative overflow-hidden group border-2 border-primary-400 dark:border-primary-600"
+              >
+                <!-- Background pattern -->
+                <div
+                  class="absolute inset-0 bg-grid-pattern opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                  aria-hidden="true"
+                ></div>
+
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-bold mb-4 text-white drop-shadow-sm">
+                    Interested in collaboration?
+                  </h3>
+                  <p class="text-white/90 mb-8 text-lg">
+                    Let's discuss how my real-time application expertise and
+                    full-stack development skills can bring your project to
+                    life.
+                  </p>
+                  <a
+                    href="#contact"
+                    class="inline-flex items-center px-6 py-3 bg-white text-primary-700 rounded-xl font-medium hover:bg-gray-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 shadow-md hover:shadow-lg transform hover:scale-105"
+                  >
+                    Get in touch
+                    <svg
+                      class="w-5 h-5 ml-2 animate-pulse-slow"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </section>
