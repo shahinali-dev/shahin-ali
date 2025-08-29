@@ -1460,9 +1460,10 @@
     <section
       id="experience"
       class="py-20 bg-gray-50 dark:bg-dark-900 relative overflow-hidden transition-all duration-500"
+      aria-labelledby="experience-heading"
     >
-      <!-- Background Elements -->
-      <div class="absolute inset-0">
+      <!-- Decorative Background Elements -->
+      <div class="absolute inset-0" aria-hidden="true">
         <div
           class="absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-primary-200 to-secondary-200 rounded-full opacity-20 animate-pulse"
         ></div>
@@ -1472,34 +1473,39 @@
       </div>
 
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-         <!-- section header -->
-        <div class="text-center mb-16 scroll-reveal">
+        <!-- Section Header -->
+        <header class="text-center mb-16 scroll-reveal">
           <h2
+            id="experience-heading"
             class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-all duration-500"
           >
             Professional <span class="text-gradient">Experience</span>
           </h2>
           <div
             class="w-32 h-1.5 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 mx-auto mb-6 rounded-full"
+            aria-hidden="true"
           ></div>
           <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-all duration-500">
             My journey in the world of software development
           </p>
-        </div>
+        </header>
 
-        <!-- Single Experience -->
+        <!-- Experience Timeline -->
         <div class="flex justify-center">
-          <div class="max-w-2xl w-full scroll-reveal">
+          <article class="max-w-2xl w-full scroll-reveal">
+            <!-- Current Position Card -->
             <div
               class="bg-white dark:bg-dark-800 p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-4 border border-gray-100 dark:border-dark-700"
             >
-              <div class="text-center mb-6">
+              <!-- Job Header -->
+              <header class="text-center mb-6">
                 <div
                   class="inline-flex items-center px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-sm font-medium mb-4 transition-all duration-500"
                 >
-                  <div
+                  <span
                     class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"
-                  ></div>
+                    aria-hidden="true"
+                  ></span>
                   Current Position
                 </div>
                 <h3
@@ -1512,9 +1518,10 @@
                 >
                   Minimatic Solution
                 </p>
-                <p class="text-gray-500 dark:text-gray-400">2023 - Present</p>
-              </div>
+                <time class="text-gray-500 dark:text-gray-400">2023 - Present</time>
+              </header>
 
+              <!-- Job Description and Achievements -->
               <div class="space-y-6">
                 <p
                   class="text-gray-600 dark:text-gray-300 text-center leading-relaxed transition-all duration-500"
@@ -1526,12 +1533,15 @@
                   contribute to various client projects.
                 </p>
 
-                <div class="grid md:grid-cols-2 gap-4">
-                  <div
+                <!-- Key Achievements Grid -->
+                <ul class="grid md:grid-cols-2 gap-4" role="list">
+                  <li
                     class="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-dark-700 rounded-xl transition-all duration-500"
+                    role="listitem"
                   >
-                    <div
+                    <span
                       class="w-8 h-8 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center transition-all duration-500"
+                      aria-hidden="true"
                     >
                       <svg
                         class="w-4 h-4 text-primary-600 dark:text-primary-400"
@@ -1542,18 +1552,20 @@
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         ></path>
                       </svg>
-                    </div>
-                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500"
-                      >Built 10+ client websites</span
-                    >
-                  </div>
-                  <div
+                    </span>
+                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500">
+                      Built 10+ client websites
+                    </span>
+                  </li>
+                  <li
                     class="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-dark-700 rounded-xl transition-all duration-500"
+                    role="listitem"
                   >
-                    <div
+                    <span
                       class="w-8 h-8 bg-secondary-100 dark:bg-secondary-900/30 rounded-full flex items-center justify-center transition-all duration-500"
+                      aria-hidden="true"
                     >
-                      <svg
+                     <svg
                         class="w-4 h-4 text-secondary-600 dark:text-secondary-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
@@ -1562,18 +1574,20 @@
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         ></path>
                       </svg>
-                    </div>
-                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500" 
-                      >Learning modern frameworks</span
-                    >
-                  </div>
-                  <div
+                    </span>
+                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500">
+                      Learning modern frameworks
+                    </span>
+                  </li>
+                  <li
                     class="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-dark-700 rounded-xl transition-all duration-500"
+                    role="listitem"
                   >
-                    <div
+                    <span
                       class="w-8 h-8 bg-accent-100 dark:bg-accent-900/30 rounded-full flex items-center justify-center transition-all duration-500"
+                      aria-hidden="true"
                     >
-                      <svg
+                       <svg
                         class="w-4 h-4 text-accent-600 dark:text-accent-400 transition-all duration-500"
                         fill="currentColor"
                         viewBox="0 0 20 20"
@@ -1582,16 +1596,18 @@
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         ></path>
                       </svg>
-                    </div>
-                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500"
-                      >Team collaboration</span
-                    >
-                  </div>
-                  <div
+                    </span>
+                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500">
+                      Team collaboration
+                    </span>
+                  </li>
+                  <li
                     class="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-dark-700 rounded-xl transition-all duration-500"
+                    role="listitem"
                   >
-                    <div
+                    <span
                       class="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center transition-all duration-500"
+                      aria-hidden="true"
                     >
                       <svg
                         class="w-4 h-4 text-purple-600 dark:text-purple-400"
@@ -1602,14 +1618,15 @@
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         ></path>
                       </svg>
-                    </div>
-                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500"
-                      >Problem solving skills</span
-                    >
-                  </div>
-                </div>
+                    </span>
+                    <span class="text-gray-700 dark:text-gray-300 text-sm transition-all duration-500">
+                      Problem solving skills
+                    </span>
+                  </li>
+                </ul>
 
-                <div class="flex flex-wrap gap-2 justify-center">
+                <!-- Technologies Used -->
+                <footer class="flex flex-wrap gap-2 justify-center" aria-label="Technologies used">
                   <span
                     class="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm transition-all duration-500"
                     >React</span
@@ -1630,10 +1647,10 @@
                     class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 rounded-full text-sm transition-all duration-500"
                     >HTML/CSS</span
                   >
-                </div>
+                </footer>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
