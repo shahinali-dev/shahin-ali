@@ -1571,51 +1571,95 @@
 
         <div class="relative">
           <!-- Central Hub -->
-          <div class="flex justify-center mb-16 scroll-reveal">
+          <div class="flex justify-center mb-16 scroll-reveal py-10">
             <div class="relative">
               <!-- Central Circle -->
               <div
-                class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-br from-primary-500 via-secondary-500 to-accent-500 flex items-center justify-center shadow-2xl animate-gradient-x relative"
+                class="w-28 h-28 sm:w-36 sm:h-36 rounded-full relative flex items-center justify-center"
               >
-                <!-- Glow Effect -->
-                <div class="absolute inset-0 blur-3xl bg-primary-500/40 rounded-full"></div>
+                <!-- Multi-layered background -->
+                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-violet-600 via-primary-500 to-pink-500 opacity-80 animate-pulse-slow"></div>
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-blue-500 via-secondary-500 to-purple-500 opacity-80 blur-sm"></div>
+                <div class="absolute inset-2 rounded-full bg-gradient-to-br from-dark-800/90 to-dark-900/90 backdrop-blur-xl border border-white/10"></div>
+                
+                <!-- Glass effect overlay -->
+                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm"></div>
+                
+                <!-- Content -->
                 <div class="text-white text-center relative z-10">
-                  <div class="text-lg sm:text-2xl font-bold">Full</div>
-                  <div class="text-sm sm:text-lg">Stack</div>
+                  <div class="text-lg sm:text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Full</div>
+                  <div class="text-sm sm:text-lg text-white/90">Stack</div>
                 </div>
+                
+                <!-- Outer glow -->
+                <div class="absolute -inset-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 opacity-30 blur-2xl animate-pulse-slow"></div>
               </div>
 
               <!-- Orbiting Skills -->
-              <div
-                class="absolute inset-0 animate-spin-slow"
-                style="animation-direction: reverse; animation-duration: 12s"
-              >
-                <!-- JavaScript -->
-                <div
-                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-yellow-400 text-lg shadow-lg hover:scale-110 hover:shadow-yellow-500/40 transition-all duration-500"
-                >
-                  <i class="fa-brands fa-js"></i>
-                </div>
+              <div class="absolute inset-0">
+                <!-- Rotating Technologies Circle -->
+                <div class="absolute inset-0">
+                  <!-- Orbit Path (visible circle) -->
+                  <div class="absolute inset-[-30px] rounded-full border border-white/10"></div>
+                  
+                  <!-- Rotating Technologies -->
+                  <div class="absolute inset-0 animate-spin-slow" style="animation-duration: 30s">
+                    <!-- Frontend Technologies (Top Quarter) -->
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[90%] flex gap-4">
+                      <!-- JavaScript -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-yellow-400 text-lg shadow-lg hover:scale-110 hover:shadow-yellow-500/40 transition-all duration-500 group">
+                        <i class="fa-brands fa-js group-hover:animate-bounce"></i>
+                        <span class="absolute -bottom-6 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">JavaScript</span>
+                      </div>
+                      <!-- React -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-cyan-400 text-xl shadow-lg hover:scale-110 hover:shadow-cyan-500/40 transition-all duration-500 group">
+                        <i class="fa-brands fa-react animate-spin-slow"></i>
+                        <span class="absolute -bottom-6 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">React</span>
+                      </div>
+                    </div>
 
-                <!-- React -->
-                <div
-                  class="absolute top-1/2 -right-8 transform -translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-cyan-400 text-xl shadow-lg hover:scale-110 hover:shadow-cyan-500/40 transition-all duration-500"
-                >
-                  <i class="fa-brands fa-react"></i>
-                </div>
+                    <!-- Backend Technologies (Right Quarter) -->
+                    <div class="absolute top-1/2 right-0 translate-x-[90%] -translate-y-1/2 flex flex-col gap-4">
+                      <!-- Node.js -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-green-400 text-lg shadow-lg hover:scale-110 hover:shadow-green-500/40 transition-all duration-500 group">
+                        <i class="fa-brands fa-node-js"></i>
+                        <span class="absolute -left-16 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">Node.js</span>
+                      </div>
+                      <!-- NestJS -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-red-500/40 transition-all duration-500 group">
+                        <img src="https://nestjs.com/img/logo-small.svg" alt="NestJS" class="w-6 h-6" />
+                        <span class="absolute -left-16 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">NestJS</span>
+                      </div>
+                    </div>
 
-                <!-- TypeScript -->
-                <div
-                  class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-blue-400 text-lg shadow-lg hover:scale-110 hover:shadow-blue-500/40 transition-all duration-500"
-                >
-                  <i class="fa-brands fa-ts"></i>
-                </div>
+                    <!-- Database Technologies (Bottom Quarter) -->
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[90%] flex gap-4">
+                      <!-- MongoDB -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-green-400 text-lg shadow-lg hover:scale-110 hover:shadow-green-500/40 transition-all duration-500 group">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span class="absolute -top-6 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">MongoDB</span>
+                      </div>
+                      <!-- PostgreSQL -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-blue-400 text-lg shadow-lg hover:scale-110 hover:shadow-blue-500/40 transition-all duration-500 group">
+                        <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="postgresql" class="w-6 h-6" />
+                        <span class="absolute -top-6 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">PostgreSQL</span>
+                      </div>
+                    </div>
 
-                <!-- Database -->
-                <div
-                  class="absolute top-1/2 -left-8 transform -translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-purple-400 text-lg shadow-lg hover:scale-110 hover:shadow-purple-500/40 transition-all duration-500"
-                >
-                  <i class="fa-solid fa-database"></i>
+                    <!-- Tools & Others (Left Quarter) -->
+                    <div class="absolute top-1/2 left-0 -translate-x-[90%] -translate-y-1/2 flex flex-col gap-4">
+                      <!-- TypeScript -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-blue-400 text-lg shadow-lg hover:scale-110 hover:shadow-blue-500/40 transition-all duration-500 group">
+                        <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="typescript" class="w-6 h-6" />
+                        <span class="absolute -right-16 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">TypeScript</span>
+                      </div>
+                      <!-- Next.js -->
+                      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-white/40 transition-all duration-500 group">
+                        <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" class="w-8 h-8 invert" />
+                        <span class="absolute -right-16 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">Next.js</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1626,7 +1670,7 @@
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- Frontend Development -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
             >
               <h3
                 class="text-xl font-semibold text-orange-500 dark:text-orange-400 mb-4 transition-all duration-500"
@@ -1638,7 +1682,7 @@
                   <i class="fa-brands fa-react text-2xl mb-2"></i><span>React.js</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" class="w-6 h-6 mb-2" />
+                  <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" class="w-6 h-6 dark:invert mb-2 transition-all duration-500" />
                   <span>Next.js</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
@@ -1658,7 +1702,7 @@
       
             <!-- Backend Development -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
             >
               <h3
                 class="text-xl font-semibold text-blue-500 dark:text-blue-400 mb-4 transition-all duration-500"
@@ -1683,7 +1727,7 @@
       
             <!-- API & Integration -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
             >
               <h3
                 class="text-xl font-semibold text-green-500 dark:text-green-400 mb-4 transition-all duration-500"
@@ -1702,7 +1746,7 @@
       
             <!-- Database & Caching -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
             >
               <h3
                 class="text-xl font-semibold text-purple-500 dark:text-purple-400 mb-4 transition-all duration-500"
@@ -1727,7 +1771,7 @@
       
             <!-- DevOps & Cloud -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
             >
               <h3
                 class="text-xl font-semibold text-teal-500 dark:text-teal-400 mb-4 transition-all duration-500"
@@ -1746,7 +1790,7 @@
       
             <!-- Tools & Others -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
             >
               <h3
                 class="text-xl font-semibold text-pink-500 dark:text-pink-400 mb-4 transition-all duration-500"
