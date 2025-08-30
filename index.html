@@ -116,7 +116,12 @@
                 aria-label="Toggle Dark/Light Mode"
                 type="button"
               >
-                <svg
+               
+                <svg id="theme-toggle-light-icon" aria-hidden="true" fill="none" focusable="false" height="22" role="presentation" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="1.5"></path>
+                  <path d="M12 2V4M12 20V22M4 12H2M22 12H20M19.778 4.223L17.556 6.445M6.444 6.254L4.222 4.222M6.444 17.556L4.222 19.778M19.778 19.777L17.556 17.555" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+                </svg>
+                 <svg
                   id="theme-toggle-dark-icon"
                   class="hidden w-5 h-5"
                   fill="currentColor"
@@ -125,17 +130,6 @@
                 >
                   <path
                     d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                  ></path>
-                </svg>
-                <svg
-                  id="theme-toggle-light-icon"
-                  class="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M10 2L13.09 8.26L20 9L14 14.74L15.18 21.02L10 17.77L4.82 21.02L6 14.74L0 9L6.91 8.26L10 2Z"
                   ></path>
                 </svg>
               </button>
@@ -374,11 +368,8 @@
                     </div>
 
                     <!-- Next.js -->
-                    <div class="group" title="Next.js" role="listitem">
-                      <i
-                        class="fab fa-neos text-2xl sm:text-3xl text-gray-500 light:text-gray-700 transition-all duration-300 group-hover:scale-110"
-                        aria-label="Next.js"
-                      ></i>
+                    <div class="group" title="Next.js" role="listitem">                      
+                      <img src="./assets/icons/next-js.svg" alt="Next.js" class="h-8 w-8 object-center transition-all duration-300 group-hover:scale-110 "/>
                     </div>
 
                     <!-- JavaScript -->
@@ -399,23 +390,12 @@
 
                     <!-- TypeScript -->
                     <div class="group" title="TypeScript" role="listitem">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 128 128"
-                        class="w-6 h-6 sm:w-8 sm:h-8 transition-all duration-300 group-hover:scale-110"
-                        aria-label="TypeScript"
-                      >
-                        <path fill="#3178c6" d="M2 2h124v124H2z"></path>
-                        <path
-                          fill="#fff"
-                          d="M75.6 79.7v9.6c3.9 2 8.6 3 14.1 3 3.3 0 5.9-.5 7.9-1.6 2-1.1 3-2.8 3-5.2 0-1.7-.5-3-1.6-4-1.1-.9-3.3-1.8-6.8-2.6l-4.5-1c-6.3-1.4-10.8-3.4-13.6-5.8-2.8-2.5-4.2-6-4.2-10.6 0-3.2.9-6.1 2.8-8.6 1.9-2.6 4.6-4.6 8.2-6 3.6-1.4 7.8-2.1 12.7-2.1 5.4 0 10.2.9 14.5 2.7v9.1c-4.2-2.1-9-3.1-14.3-3.1-3.2 0-5.7.6-7.5 1.7-1.8 1.1-2.7 2.8-2.7 5 0 2 .6 3.5 1.9 4.6 1.3 1 3.6 2 7.1 2.8l4.6 1.1c6.4 1.5 10.9 3.5 13.7 6.1 2.8 2.6 4.2 6.1 4.2 10.6 0 5-1.8 8.9-5.4 11.7-3.6 2.8-8.7 4.2-15.4 4.2-6.2 0-11.6-1-16.1-3.1zM53.6 55.6v41.1H43.4V55.6H27.8v-8.6h41.4v8.6H53.6z"
-                        ></path>
-                      </svg>
+                      <img src="./assets/icons/typescript.svg" alt="TypeScript" class="h-8 w-8 object-center transition-all duration-300 group-hover:scale-110 rounded-xs"/>
                     </div>
 
                     <!-- MongoDB -->
                     <div class="group" title="MongoDB" role="listitem">
-                      <svg
+                      <!-- <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 64 64"
                         class="w-6 h-6 sm:w-8 sm:h-8 transition-all duration-300 group-hover:scale-110"
@@ -429,26 +409,13 @@
                           fill="#439934"
                           d="M31.6 0s-1.5 9.5-7.2 17c-5.5 7.2-12.5 13-13.8 22.3C9 56.6 29.5 63.4 31.3 64V0z"
                         />
-                      </svg>
+                      </svg> -->
+                    <i class="fa-solid fa-leaf text-green-400 text-3xl transition-all duration-300 group-hover:scale-110"></i>
                     </div>
 
                     <!-- PostgreSQL -->
                     <div class="group" title="PostgreSQL" role="listitem">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        class="w-6 h-6 sm:w-8 sm:h-8 transition-all duration-300 group-hover:scale-110"
-                        aria-label="PostgreSQL"
-                      >
-                        <path
-                          fill="#336791"
-                          d="M255.9 0C114.6 0 0 114.6 0 255.9s114.6 256 255.9 256 256-114.6 256-256S397.2 0 255.9 0z"
-                        />
-                        <path
-                          fill="#fff"
-                          d="M378.7 160.3c-10.7-9.2-26.7-11.8-48.3-8-6.9-4.9-15-8.3-24.2-9.9-17.1-2.8-38.3-2.2-63.5 1.6-14.3 2.1-27.4 5.8-39.1 10.9-9.1-2.5-17.5-2.9-25.2-1.3-17.2 3.6-28.2 14.2-33.5 31.9-2.4 8-3.7 16.4-3.8 25.2-9.2 7.6-16 17.3-20.2 29-7.1 20.6-5.3 42.1 5.2 64.4 12.4 25.9 33.8 43.9 64 53.8 10.1 3.4 20.9 5.2 32.2 5.3 7.8 10.1 16.9 17.6 27.2 22.5 18.5 8.7 39.9 8.7 64.2 0 10.3-4.9 19.4-12.4 27.2-22.5 11.4-.1 22.1-1.9 32.2-5.3 30.2-9.9 51.6-27.9 64-53.8 10.5-22.3 12.3-43.8 5.2-64.4-4.2-11.7-11-21.4-20.2-29-.1-8.8-1.4-17.2-3.8-25.2-5.3-17.7-16.3-28.3-33.5-31.9-7.7-1.6-16.1-1.2-25.2 1.3-11.7-5.1-24.8-8.8-39.1-10.9-25.2-3.8-46.4-4.4-63.5-1.6-9.2 1.6-17.3 5-24.2 9.9-21.6-3.8-37.6-1.2-48.3 8-13.5 11.7-20.5 32.8-20.5 63.4 0 23.1 4.1 43.1 12.2 60.1 7.5 15.5 18.3 26.8 32.5 34.3-3.4-14.6-5.2-29.8-5.2-45.7 0-21.1 3.7-37.9 11.2-50.5 7-11.8 17-18.7 30.1-20.5 12.4-1.7 23.7.8 34.1 7.6 7.9 5 15.5 12.3 22.8 22 7.3-9.7 14.9-17 22.8-22 10.4-6.8 21.7-9.3 34.1-7.6 13.1 1.8 23.1 8.7 30.1 20.5 7.5 12.6 11.2 29.4 11.2 50.5 0 15.9-1.8 31.1-5.2 45.7 14.2-7.5 25-18.8 32.5-34.3 8.1-17 12.2-37 12.2-60.1 0-30.6-7-51.7-20.5-63.4z"
-                        />
-                      </svg>
+                      <img src="./assets/icons/postgresql.svg" alt="PostgreSQL" class="h-8 w-8 object-center transition-all duration-300 group-hover:scale-110"/>
                     </div>
                   </div>
                 </section>
