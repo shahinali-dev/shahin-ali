@@ -684,37 +684,14 @@
                     <div
                       class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center shadow-lg"
                     >
-                      <svg
-                        class="w-10 h-10 text-white drop-shadow-md"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        ></path>
-                      </svg>
+                      <i class="fa-solid fa-user text-4xl text-white drop-shadow-md"></i>
                     </div>
                     <!-- Status indicator -->
                     <span
                       class="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 border-2 border-white dark:border-dark-700 rounded-full flex items-center justify-center"
                       aria-hidden="true"
                     >
-                      <svg
-                        class="w-3 h-3 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
+                      <i class="fa-solid fa-check"></i>
                     </span>
                   </div>
 
@@ -911,7 +888,7 @@
 
                 <!-- Tech Grid -->
                 <ul
-                  class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-8 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-secondary-50/50 before:to-transparent dark:before:from-secondary-900/10 dark:before:to-transparent before:rounded-xl before:-z-10"
+                  class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-8 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-secondary-50/50 before:to-transparent dark:before:from-secondary-900/10 dark:before:to-transparent before:rounded-xl before:-z-10 space-y-2"
                   role="list"
                 >
                   <!-- TypeScript -->
@@ -919,14 +896,7 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-blue-50 dark:bg-blue-900/30 rounded-xl border border-blue-200 dark:border-blue-700 transition-all duration-300 shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
                     >
-                      <div
-                        class="bg-blue-100 dark:bg-blue-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-[#3178C6] dark:text-[#60A5FA]"
-                          >TS</span
-                        >
-                      </div>
+                      <img src="./assets/icons/typescript.svg" alt="TypeScript" class="h-6 w-6 object-cover rounded-xs "/>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >TypeScript</span
@@ -939,14 +909,10 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-white dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-700 transition-all duration-300 h- shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
                     >
-                      <div
-                        class="bg-blue-100 dark:bg-blue-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <i
-                          class="fab fa-react text-2xl text-[#61DAFB]"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
+                    <i
+                      class="fab fa-react text-2xl text-[#61DAFB]"
+                      aria-hidden="true"
+                    ></i>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >React</span
@@ -959,14 +925,7 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-600 transition-all duration-300 shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
                     >
-                      <div
-                        class="bg-gray-100 dark:bg-gray-700/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-black dark:text-white"
-                          >N</span
-                        >
-                      </div>
+                     <img src="./assets/icons/next-js.svg" alt="Next.js" class="h-6 w-6 object-cover dark:invert "/>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >Next.js</span
@@ -979,14 +938,11 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700 transition-all duration-300 shadow-md hover:shadow-lg card-hover transform hover:-translate-y-1"
                     >
-                      <div
-                        class="bg-green-100 dark:bg-green-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <i
-                          class="fab fa-node-js text-2xl text-[#339933]"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
+                      
+                    <i
+                      class="fab fa-node-js text-2xl text-[#339933]"
+                      aria-hidden="true"
+                    ></i>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >Node.js</span
@@ -999,14 +955,8 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-gray-50 dark:bg-gray-900/30 rounded-xl border border-gray-300 dark:border-gray-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
-                      <div
-                        class="bg-gray-200 dark:bg-gray-700 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-gray-700 dark:text-gray-300"
-                          >Ex</span
-                        >
-                      </div>
+                      
+                       <img src="./assets/icons/Express.svg" alt="Express.js" class="h-6 w-6 object-cover dark:invert "/>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >Express</span
@@ -1019,14 +969,7 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-red-50 dark:bg-red-900/30 rounded-xl border-2 border-red-200 dark:border-red-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
-                      <div
-                        class="bg-red-100 dark:bg-red-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-[#E0234E] dark:text-[#FF6B81]"
-                          >N</span
-                        >
-                      </div>
+                      <img src="./assets/icons/nest-js.svg" alt="Nest.js" class="h-6 w-6 object-cover "/>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >Nest.js</span
@@ -1039,14 +982,7 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-indigo-50 dark:bg-indigo-900/30 rounded-xl border-2 border-indigo-200 dark:border-indigo-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
-                      <div
-                        class="bg-indigo-100 dark:bg-indigo-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-[#336791] dark:text-[#A3BFFA]"
-                          >PG</span
-                        >
-                      </div>
+                      <img src="./assets/icons/postgresql.svg" alt="PostgreSQL" class="h-6 w-6 object-cover "/>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >PostgreSQL</span
@@ -1059,14 +995,7 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-green-50 dark:bg-green-900/30 rounded-xl border-2 border-green-200 dark:border-green-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
-                      <div
-                        class="bg-green-100 dark:bg-green-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-[#4DB33D] dark:text-[#68D391]"
-                          >M</span
-                        >
-                      </div>
+                      <img src="./assets/icons/MongoDB.svg" alt="MongoDB" class="h-6 w-6 object-cover "/>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >MongoDB</span
@@ -1079,14 +1008,7 @@
                     <div
                       class="flex px-8 py-3 gap-2 items-center justify-center bg-purple-50 dark:bg-purple-900/30 rounded-xl border-2 border-purple-200 dark:border-purple-700 transition-all duration-300 shadow-sm hover:shadow-md card-hover"
                     >
-                      <div
-                        class="bg-purple-100 dark:bg-purple-800/50 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm"
-                      >
-                        <span
-                          class="text-lg font-bold text-[#9F7AEA] dark:text-[#B794F4]"
-                          >LC</span
-                        >
-                      </div>
+                      <img src="./assets/icons/langchai.svg" alt="LangChain" class="h-6 w-6 object-cover dark:invert"/>
                       <span
                         class="text-sm font-medium text-gray-800 dark:text-gray-200"
                         >LangChain</span
@@ -1179,17 +1101,7 @@
                     <span
                       class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center mt-0.5 shadow-md ring-4 ring-primary-50 dark:ring-primary-900/20"
                     >
-                      <svg
-                        class="w-5 h-5 text-primary-700 dark:text-primary-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
+                      <i class="fa-solid fa-check text-primary-700 dark:text-primary-300"></i>
                     </span>
                     <p class="text-gray-700 dark:text-gray-300">
                       <strong class="font-medium text-gray-900 dark:text-white"
@@ -1205,17 +1117,8 @@
                     <span
                       class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-100 dark:bg-secondary-900/40 flex items-center justify-center mt-0.5 shadow-md ring-4 ring-secondary-50 dark:ring-secondary-900/20"
                     >
-                      <svg
-                        class="w-5 h-5 text-secondary-700 dark:text-secondary-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
+                      <i class="fa-solid fa-check text-secondary-700 dark:text-secondary-300"></i>
+
                     </span>
                     <p class="text-gray-700 dark:text-gray-300">
                       <strong class="font-medium text-gray-900 dark:text-white"
@@ -1231,17 +1134,8 @@
                     <span
                       class="flex-shrink-0 w-12 h-12 rounded-full bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center mt-0.5 shadow-md ring-4 ring-accent-50 dark:ring-accent-900/20"
                     >
-                      <svg
-                        class="w-5 h-5 text-accent-700 dark:text-accent-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
+                      <i class="fa-solid fa-check text-accent-700 dark:text-accent-300"></i>
+                      
                     </span>
                     <p class="text-gray-700 dark:text-gray-300">
                       <strong class="font-medium text-gray-900 dark:text-white"
@@ -1257,9 +1151,9 @@
             </div>
 
             <!-- Right Column: Call to Action -->
-            <div class="lg:col-span-5 space-y-10">
+            <div class="lg:col-span-5">
               <section
-                class="scroll-reveal about-card bg-gradient-to-br from-primary-600 to-secondary-600 dark:from-primary-700 dark:to-secondary-700 p-10 sm:p-12 rounded-3xl shadow-2xl text-white relative overflow-hidden group border border-primary-400/50 dark:border-primary-600/50"
+                class="scroll-reveal about-card bg-gradient-to-br from-primary-600 to-secondary-600 dark:from-primary-700 dark:to-secondary-700 p-6 sm:p-12 rounded-3xl shadow-2xl text-white relative overflow-hidden group border border-primary-400/50 dark:border-primary-600/50"
               >
                 <!-- Background pattern -->
                 <div
@@ -1267,33 +1161,21 @@
                   aria-hidden="true"
                 ></div>
 
-                <div class="relative z-10">
-                  <h3 class="text-3xl font-bold mb-6 text-white drop-shadow-md">
+                <div class="relative z-10 space-y-4">
+                  <h3 class="text-3xl font-bold  text-white drop-shadow-md">
                     Need a Full Stack Developer?
                   </h3>
-                  <p class="text-white/90 mb-8 text-lg">
+                  <p class="text-white/90  text-lg">
                     Let's discuss how my real-time application expertise and
                     full-stack development skills can bring your project to
                     life.
                   </p>
                   <a
                     href="#contact"
-                    class="inline-flex items-center px-8 py-4 bg-white text-primary-700 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    class="inline-flex items-center px-4 py-3 bg-white text-primary-700 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     Get in touch
-                    <svg
-                      class="w-5 h-5 ml-2 animate-pulse-slow"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      ></path>
-                    </svg>
+                    <i class="fa-solid fa-arrow-right-long ml-2 animate-pulse-slow"></i>
                   </a>
                 </div>
               </section>
@@ -1420,6 +1302,7 @@
                 </div>
               </div>
             </article>
+
         </div>
       </section>
 
@@ -1437,7 +1320,7 @@
         </div>
 
         <!-- Experience Card -->
-        <div class="relative bg-white/80 dark:bg-dark-800/90 backdrop-blur-xl border border-gray-200/40 dark:border-dark-700 p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 scroll-reveal">
+        <div class="relative bg-white/80 dark:bg-dark-800/90 backdrop-blur-xl border border-gray-200/40 dark:border-dark-700 p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 scroll-reveal animated-card">
           <!-- Badge -->
           <div class="inline-flex items-center px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-sm font-medium mb-6 transition-all duration-500">
             <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
@@ -1594,7 +1477,7 @@
                       </div>
                       <!-- NestJS -->
                       <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-red-500/40 transition-all duration-500 group">
-                        <img src="https://nestjs.com/img/logo-small.svg" alt="NestJS" class="w-6 h-6" />
+                        <img src="./assets/icons/nest-js.svg" alt="NestJS" class="w-6 h-6" />
                         <span class="absolute -left-16 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">NestJS</span>
                       </div>
                     </div>
@@ -1603,12 +1486,12 @@
                     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[90%] flex gap-4">
                       <!-- MongoDB -->
                       <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-green-400 text-lg shadow-lg hover:scale-110 hover:shadow-green-500/40 transition-all duration-500 group">
-                        <i class="fa-solid fa-leaf"></i>
+                        <img src="./assets/icons/MongoDB.svg" alt="MongoDB" class="h-6 w-6 object-cover "/>
                         <span class="absolute -top-6 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">MongoDB</span>
                       </div>
                       <!-- PostgreSQL -->
                       <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-blue-400 text-lg shadow-lg hover:scale-110 hover:shadow-blue-500/40 transition-all duration-500 group">
-                        <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="postgresql" class="w-6 h-6" />
+                        <img src="./assets/icons/postgresql.svg" alt="postgresql" class="w-6 h-6" />
                         <span class="absolute -top-6 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">PostgreSQL</span>
                       </div>
                     </div>
@@ -1617,12 +1500,12 @@
                     <div class="absolute top-1/2 left-0 -translate-x-[90%] -translate-y-1/2 flex flex-col gap-4">
                       <!-- TypeScript -->
                       <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-blue-400 text-lg shadow-lg hover:scale-110 hover:shadow-blue-500/40 transition-all duration-500 group">
-                        <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="typescript" class="w-6 h-6" />
+                        <img src="./assets/icons/typescript.svg" alt="typescript" class="w-6 h-6" />
                         <span class="absolute -right-16 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">TypeScript</span>
                       </div>
                       <!-- Next.js -->
                       <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-white/40 transition-all duration-500 group">
-                        <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" class="w-8 h-8 invert" />
+                        <img src="./assets/icons/next-js.svg" alt="Next.js" class="w-8 h-8 dark:invert" />
                         <span class="absolute -right-16 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">Next.js</span>
                       </div>
                     </div>
@@ -1637,7 +1520,7 @@
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- Frontend Development -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal animated-card"
             >
               <h3
                 class="text-xl font-semibold text-orange-500 dark:text-orange-400 mb-4 transition-all duration-500"
@@ -1646,30 +1529,30 @@
               </h3>
               <div class="flex flex-wrap justify-center gap-6">
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-brands fa-react text-2xl mb-2"></i><span>React.js</span>
+                  <i class="fa-brands fa-react text-2xl mb-2 text-cyan-400"></i><span>React.js</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" class="w-6 h-6 dark:invert mb-2 transition-all duration-500" />
+                  <img src="./assets/icons/next-js.svg" alt="Next.js" class="w-6 h-6 dark:invert mb-2 transition-all duration-500" />
                   <span>Next.js</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-brands fa-js text-2xl mb-2"></i><span>JavaScript</span>
+                  <i class="fa-brands fa-js text-2xl mb-2 text-yellow-400"></i><span>JavaScript</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-code text-2xl mb-2"></i><span>TypeScript</span>
+                  <img src="./assets/icons/typescript.svg" alt="TypeScript" class="h-6 w-6 object-center rounded-xs mb-2"/><span>TypeScript</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-wind text-2xl mb-2"></i><span>Tailwind CSS</span>
+                  <img src="./assets/icons/tailwind.svg" alt="Tailwind Css" class="h-6 w-6 object-center mb-2"><span>Tailwind CSS</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-diagram-project text-2xl mb-2"></i><span>Redux</span>
+                  <img src="./assets/icons/redux.svg" alt="Redux" class="h-6 w-6 object-center mb-2"><span>Redux</span>
                 </div>
               </div>
             </article>
       
             <!-- Backend Development -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal animated-card"
             >
               <h3
                 class="text-xl font-semibold text-blue-500 dark:text-blue-400 mb-4 transition-all duration-500"
@@ -1678,23 +1561,23 @@
               </h3>
               <div class="flex flex-wrap justify-center gap-6">
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-brands fa-node-js text-2xl mb-2"></i><span>Node.js</span>
+                  <i class="fa-brands fa-node-js text-2xl text-green-400 mb-2"></i><span>Node.js</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-server text-2xl mb-2"></i><span>Express.js</span>
+                  <img src="./assets/icons/Express.svg" alt="Express.js" class="w-6 h-6 object-center dark:invert mb-2"><span>Express.js</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <img src="https://nestjs.com/img/logo-small.svg" alt="NestJS" class="w-6 h-6 mb-2" /><span>NestJS</span>
+                  <img src="./assets/icons/nest-js.svg" alt="NestJS" class="w-6 h-6 mb-2" /><span>NestJS</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-sitemap text-2xl mb-2"></i><span>Socket.IO</span>
+                  <img src="./assets/icons/Socket-io.svg" alt="Socket.io" class="w-6 h-6 mb-2 dark:invert" /><span>Socket.IO</span>
                 </div>
               </div>
             </article>
       
             <!-- API & Integration -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal animated-card"
             >
               <h3
                 class="text-xl font-semibold text-green-500 dark:text-green-400 mb-4 transition-all duration-500"
@@ -1713,7 +1596,7 @@
       
             <!-- Database & Caching -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal animated-card"
             >
               <h3
                 class="text-xl font-semibold text-purple-500 dark:text-purple-400 mb-4 transition-all duration-500"
@@ -1722,23 +1605,23 @@
               </h3>
               <div class="flex flex-wrap justify-center gap-6">
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-database text-2xl mb-2"></i><span>PostgreSQL</span>
+                  <img src="./assets/icons/postgresql.svg" alt="PostgreSQL" class="w-6 h-6 mb-2" /><span>PostgreSQL</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-leaf text-2xl mb-2"></i><span>MongoDB</span>
+                <img src="./assets/icons/MongoDB.svg" alt="MongoDB" class="w-6 h-6 mb-2" /><span>MongoDB</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-bolt text-2xl mb-2"></i><span>Redis</span>
+                  <img src="./assets/icons/Redis.svg" alt="Redis" class="w-6 h-6 mb-2" /><span>Redis</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-dharmachakra text-2xl mb-2"></i><span>Prisma</span>
+                  <img src="./assets/icons/prisma.svg" alt="Prisma" class="w-6 h-6 mb-2 dark:invert" /><span>Prisma</span>
                 </div>
               </div>
             </article>
       
             <!-- DevOps & Cloud -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal animated-card"
             >
               <h3
                 class="text-xl font-semibold text-teal-500 dark:text-teal-400 mb-4 transition-all duration-500"
@@ -1747,17 +1630,17 @@
               </h3>
               <div class="flex flex-wrap justify-center gap-6">
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-brands fa-docker text-2xl mb-2"></i><span>Docker</span>
+                  <i class="fa-brands fa-docker text-2xl mb-2 text-blue-600"></i><span>Docker</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-gears text-2xl mb-2"></i><span>CI/CD</span>
+                  <i class="fa-brands fa-github text-2xl mb-2" ></i><span>CI/CD</span>
                 </div>
               </div>
             </article>
       
             <!-- Tools & Others -->
             <article
-              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal"
+              class="bg-gray-100 dark:bg-dark-800 rounded-2xl shadow-lg p-6 text-center border border-gray-200 dark:border-dark-700 transition-all duration-500 scroll-reveal animated-card"
             >
               <h3
                 class="text-xl font-semibold text-pink-500 dark:text-pink-400 mb-4 transition-all duration-500"
@@ -1766,13 +1649,13 @@
               </h3>
               <div class="flex flex-wrap justify-center gap-6">
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-brands fa-git-alt text-2xl mb-2"></i><span>Git</span>
+                  <i class="fa-brands fa-git-alt text-2xl mb-2 text-accent-500"></i><span>Git</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-code text-2xl mb-2"></i><span>VS Code</span>
+                  <img src="./assets/icons/vs-code.svg" alt="vs-code" class="h-6 w-6 mb-2"><span>VS Code</span>
                 </div>
                 <div class="flex flex-col items-center text-gray-700 dark:text-gray-300 transition-all duration-500">
-                  <i class="fa-solid fa-flask text-2xl mb-2"></i><span>Postman</span>
+                  <img src="./assets/icons/Postman.svg" alt="postman" class="h-6 w-6 mb-2"><span>Postman</span>
                 </div>
               </div>
             </article>
@@ -2050,7 +1933,7 @@
           <!-- Left Column: Contact Cards -->
           <aside class="space-y-6">
             <!-- Email Card -->
-            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300 animated-card">
               <div class="flex items-start space-x-4">
                 <div class="p-3 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 rounded-xl">
                   <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2068,7 +1951,7 @@
            
 
             <!-- LinkedIn Card -->
-            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300 animated-card">
               <div class="flex items-start space-x-4">
                 <div class="p-3 bg-gradient-to-br from-accent-500/10 to-primary-500/10 rounded-xl">
                   <svg class="w-6 h-6 text-accent-500" fill="currentColor" viewBox="0 0 24 24">
@@ -2083,7 +1966,7 @@
             </article>
 
              <!-- Github Card -->
-            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300 animated-card">
               <div class="flex items-start space-x-4">
                 <div class="p-3 bg-gradient-to-br from-accent-500/10 to-primary-500/10 rounded-xl">
                    
@@ -2107,7 +1990,7 @@
             </article>
 
              <!-- Location Card -->
-            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300 animated-card">
               <div class="flex items-start space-x-4">
                 <div class="p-3 bg-gradient-to-br from-secondary-500/10 to-accent-500/10 rounded-xl">
                   <svg class="w-6 h-6 text-secondary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2123,7 +2006,7 @@
             </article>
 
             <!-- Languages Card -->
-            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <article class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow duration-300 animated-card">
               <div class="flex items-start space-x-4">
                 <div class="p-3 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl">
                   <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2140,7 +2023,7 @@
           </aside>
 
           <!-- Right Column: Contact Form -->
-          <div class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-10 border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
+          <div class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-xl rounded-2xl p-10 border border-gray-200/50 dark:border-gray-700/50 shadow-xl animated-card">
             <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send a Message</h3>
             <form class="space-y-6 py-4">
               <!-- Name and Email Fields in one line -->
