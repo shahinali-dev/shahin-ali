@@ -1818,9 +1818,10 @@
     <section
       id="projects"
       class="py-20 bg-gray-50 dark:bg-dark-900 transition-colors duration-300 relative overflow-hidden"
+      aria-labelledby="projects-heading"
     >
       <!-- Background Elements -->
-      <div class="absolute inset-0">
+      <div class="absolute inset-0" aria-hidden="true">
         <div
           class="absolute top-20 left-20 w-24 h-24 bg-gradient-to-r from-primary-200/20 to-secondary-200/20 rounded-full blur-2xl animate-pulse"
         ></div>
@@ -1830,8 +1831,10 @@
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 scroll-reveal">
+        <!-- Section Header -->
+        <header class="text-center mb-16 scroll-reveal">
           <h2
+            id="projects-heading"
             class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6"
           >
             Featured <span class="text-gradient">Projects</span>
@@ -1843,22 +1846,25 @@
             Showcasing my latest work and creative solutions built with modern
             technologies
           </p>
-        </div>
+        </header>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-reveal">
+        <!-- Projects Grid -->
+        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-reveal">
           <!-- Project 1: DishDynamo -->
-          <div
+          <article
             class="group relative bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500"
           >
-            <div class="relative h-64 overflow-hidden">
+            <figure class="relative h-64 overflow-hidden">
               <img
                 src="/assets/images/dish-dynamo-home.png"
-                alt="DishDynamo Restaurant App"
+                alt="Screenshot of DishDynamo Restaurant App"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <figcaption
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
                 <div class="absolute bottom-0 left-0 right-0 p-6">
-                  <div class="flex space-x-4 justify-center">
+                  <nav class="flex space-x-4 justify-center" aria-label="DishDynamo links">
                     <a
                       href="https://dishdynamo-c649f.web.app"
                       target="_blank"
@@ -1873,45 +1879,47 @@
                     >
                       GitHub
                     </a>
-                  </div>
+                  </nav>
                 </div>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
             <div class="p-6">
-              <div class="flex items-center justify-between mb-3">
+              <header class="flex items-center justify-between mb-3">
                 <h3 class="text-xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
                   DishDynamo
                 </h3>
-                <div class="flex items-center">
+                <span class="flex items-center">
                   <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2"></span>
                   <span class="text-sm text-green-500">Live</span>
-                </div>
-              </div>
+                </span>
+              </header>
               <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                 A modern restaurant management system with real-time ordering, menu customization, and user authentication.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
+              <footer class="flex flex-wrap gap-2 mb-4" aria-label="Technologies used">
                 <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium">React</span>
                 <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-full text-xs font-medium">Firebase</span>
                 <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-xs font-medium">Stripe</span>
                 <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-full text-xs font-medium">Tailwind</span>
-              </div>
+              </footer>
             </div>
-          </div>
+          </article>
 
           <!-- Project 2: ContestHub -->
-          <div
+          <article
             class="group relative bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500"
           >
-            <div class="relative h-64 overflow-hidden">
+            <figure class="relative h-64 overflow-hidden">
               <img
                 src="/assets/images/contest-hub.png"
-                alt="ContestHub Platform"
+                alt="Screenshot of ContestHub Platform"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <figcaption
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
                 <div class="absolute bottom-0 left-0 right-0 p-6">
-                  <div class="flex space-x-4 justify-center">
+                  <nav class="flex space-x-4 justify-center" aria-label="ContestHub links">
                     <a
                       href="https://contesthub-e5119.web.app"
                       target="_blank"
@@ -1926,45 +1934,47 @@
                     >
                       GitHub
                     </a>
-                  </div>
+                  </nav>
                 </div>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
             <div class="p-6">
-              <div class="flex items-center justify-between mb-3">
+              <header class="flex items-center justify-between mb-3">
                 <h3 class="text-xl font-bold bg-gradient-to-r from-secondary-500 to-accent-500 bg-clip-text text-transparent">
                   ContestHub
                 </h3>
-                <div class="flex items-center">
+                <span class="flex items-center">
                   <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2"></span>
                   <span class="text-sm text-green-500">Live</span>
-                </div>
-              </div>
+                </span>
+              </header>
               <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                 A contest management platform with real-time updates, secure payments, and multiple user roles.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
+              <footer class="flex flex-wrap gap-2 mb-4" aria-label="Technologies used">
                 <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium">React</span>
                 <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-xs font-medium">Node.js</span>
                 <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-xs font-medium">MongoDB</span>
                 <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 rounded-full text-xs font-medium">JWT</span>
-              </div>
+              </footer>
             </div>
-          </div>
+          </article>
 
           <!-- Project 3: CodeBuySell -->
-          <div
+          <article
             class="group relative bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500"
           >
-            <div class="relative h-64 overflow-hidden">
+            <figure class="relative h-64 overflow-hidden">
               <img
                 src="/assets/images/code-buysell.png"
-                alt="CodeBuySell Marketplace"
+                alt="Screenshot of CodeBuySell Marketplace"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <figcaption
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
                 <div class="absolute bottom-0 left-0 right-0 p-6">
-                  <div class="flex space-x-4 justify-center">
+                  <nav class="flex space-x-4 justify-center" aria-label="CodeBuySell links">
                     <a
                       href="https://codebuysell.com"
                       target="_blank"
@@ -1979,32 +1989,32 @@
                     >
                       GitHub
                     </a>
-                  </div>
+                  </nav>
                 </div>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
             <div class="p-6">
-              <div class="flex items-center justify-between mb-3">
+              <header class="flex items-center justify-between mb-3">
                 <h3 class="text-xl font-bold bg-gradient-to-r from-accent-500 to-primary-500 bg-clip-text text-transparent">
                   CodeBuySell
                 </h3>
-                <div class="flex items-center">
+                <span class="flex items-center">
                   <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2"></span>
                   <span class="text-sm text-green-500">Live</span>
-                </div>
-              </div>
+                </span>
+              </header>
               <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                 A marketplace for developers to buy and sell code snippets, templates, and digital assets.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
+              <footer class="flex flex-wrap gap-2 mb-4" aria-label="Technologies used">
                 <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium">Next.js</span>
                 <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-xs font-medium">Node.js</span>
                 <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full text-xs font-medium">PostgreSQL</span>
                 <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-full text-xs font-medium">Stripe</span>
-              </div>
+              </footer>
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
 
         <!-- View More Projects Button -->
         <div class="text-center mt-12 scroll-reveal">
@@ -2030,6 +2040,7 @@
         </div>
       </div>
     </section>
+
 
    
 
