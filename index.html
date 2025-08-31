@@ -329,21 +329,19 @@
                 aria-controls="mobile-menu"
                 type="button"
               >
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
+                <!-- Hamburger Icon -->
+                <svg id="icon-hamburger" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+
+                <!-- Close (X) Icon -->
+                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
               </button>
+
             </div>
           </div>
         </div>
@@ -354,7 +352,7 @@
           class="hidden md:hidden bg-white/95 dark:bg-dark-900/95 glass-effect border-t dark:border-dark-800 transition-all duration-300"
           role="menu"
         >
-          <ul class="px-2 pt-2 pb-3 space-y-1">
+          <ul class="p-8 space-y-3">
             <li>
               <a href="#home" class="mobile-nav-link" role="menuitem">Home</a>
             </li>

@@ -1,23 +1,40 @@
-// Enhanced mobile menu toggle
+// Enhanced mobile menu toggle with icon switch
 export function initMobileMenu() {
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
+  const iconHamburger = document.getElementById("icon-hamburger");
+  const iconClose = document.getElementById("icon-close");
+
   mobileMenuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("show");
-    const icon = mobileMenuBtn.querySelector("svg");
-    icon.style.transform = mobileMenu.classList.contains("show")
-      ? "rotate(90deg)"
-      : "rotate(0deg)";
+    const isOpen = mobileMenu.classList.contains("show");
+
+    if (isOpen) {
+      mobileMenu.classList.remove("show");
+      mobileMenu.classList.add("hidden");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      iconHamburger.classList.remove("hidden");
+      iconClose.classList.add("hidden");
+    } else {
+      mobileMenu.classList.add("show");
+      mobileMenu.classList.remove("hidden");
+      mobileMenuBtn.setAttribute("aria-expanded", "true");
+      iconHamburger.classList.add("hidden");
+      iconClose.classList.remove("hidden");
+    }
   });
+
+  // Close menu when clicking nav link
   document.querySelectorAll(".mobile-nav-link").forEach((link) => {
     link.addEventListener("click", () => {
       mobileMenu.classList.add("hidden");
       mobileMenu.classList.remove("show");
-      const icon = mobileMenuBtn.querySelector("svg");
-      icon.style.transform = "rotate(0deg)";
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      iconHamburger.classList.remove("hidden");
+      iconClose.classList.add("hidden");
     });
   });
+
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -26,8 +43,9 @@ export function initMobileMenu() {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
         mobileMenu.classList.add("hidden");
         mobileMenu.classList.remove("show");
-        const icon = mobileMenuBtn.querySelector("svg");
-        icon.style.transform = "rotate(0deg)";
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        iconHamburger.classList.remove("hidden");
+        iconClose.classList.add("hidden");
       }
     });
   });
