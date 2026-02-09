@@ -8,8 +8,8 @@ import ProjectsSection from "../components/Home/ProjectsSection";
 import SkillsSection from "../components/Home/SkillsSection";
 
 const Home = (props?: any) => html`
-  ${HeroSection()} ${AboutSection()} ${ExperienceSection()}
-  ${EducationSection()} ${SkillsSection()} ${ProjectsSection()}
+  ${HeroSection()} ${AboutSection()} ${EducationSection()}
+  ${ExperienceSection()} ${SkillsSection()} ${ProjectsSection()}
   ${ContactSection()}
 `;
 
