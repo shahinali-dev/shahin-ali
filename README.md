@@ -1,6 +1,6 @@
 # Shahin Ali - Full Stack Developer Portfolio
 
-![Portfolio Preview](./assets/images/shahin-ali.jpeg)
+![Portfolio Preview](/images/shahin-ali.jpeg)
 
 A modern, high-performance portfolio website built with Hono.js and deployed on Cloudflare Workers. Features an elegant, interactive design with dark/light mode support, showcasing my skills, projects, education, and technical blog.
 
