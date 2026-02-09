@@ -1,6 +1,6 @@
 import { html } from "hono/html";
-import Footer from "./components/footer/footer";
-import Navbar from "./components/navbar/navbar";
+import Footer from "../components/footer/Footer";
+import Navbar from "../components/navbar/Navbar";
 
 interface RootLayoutProps {
   title?: string;
