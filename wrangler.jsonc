@@ -6,12 +6,10 @@
   "assets": {
     "directory": "./public",
   },
-  // "compatibility_flags": [
-  //   "nodejs_compat"
-  // ],
-  // "vars": {
-  //   "MY_VAR": "my-variable"
-  // },
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "RESEND_API_KEY": "re_RyQ8nSGe_7h1tyC7BBdrzG13zubq1LZW6",
+  },
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",

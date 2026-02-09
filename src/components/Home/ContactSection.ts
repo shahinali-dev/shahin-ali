@@ -143,7 +143,7 @@ const renderContactCard = (card: ContactCard) => {
     >
       <div class="flex items-start space-x-4">
         <div
-          class="p-3 bg-gradient-to-br ${card.gradientColors} rounded-xl flex-shrink-0"
+          class="p-3 bg-linear-to-br ${card.gradientColors} rounded-xl shrink-0"
         >
           ${card.title === "LinkedIn" || card.title === "Github"
             ? html`<svg
@@ -178,7 +178,7 @@ const renderContactCard = (card: ContactCard) => {
                   : ""}
                 class="${card.title === "LinkedIn"
                   ? "text-accent-500 hover:text-accent-600"
-                  : "text-primary-500 hover:text-primary-600"} transition-colors break-words"
+                  : "text-primary-500 hover:text-primary-600"} transition-colors wrap-break-word"
               >
                 ${card.link.text}
               </a>`
@@ -201,12 +201,12 @@ const ContactSection = () => {
       <!-- Background Elements -->
       <div class="absolute inset-0" aria-hidden="true">
         <div
-          class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-50/10 via-secondary-50/10 to-accent-50/10 dark:from-primary-900/10 dark:via-secondary-900/10 dark:to-accent-900/10"
+          class="absolute top-0 left-0 w-full h-full bg-linear-to-br from-primary-50/10 via-secondary-50/10 to-accent-50/10 dark:from-primary-900/10 dark:via-secondary-900/10 dark:to-accent-900/10"
         ></div>
         ${backgroundGradients.map(
           (gradient) => html`
             <div
-              class="absolute ${gradient.position} ${gradient.size} bg-gradient-to-r ${gradient.colors} rounded-full blur-3xl"
+              class="absolute ${gradient.position} ${gradient.size} bg-linear-to-r ${gradient.colors} rounded-full blur-3xl"
             ></div>
           `,
         )}
@@ -234,7 +234,7 @@ const ContactSection = () => {
             Get In <span class="text-gradient">Touch</span>
           </h2>
           <div
-            class="w-32 h-1.5 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 mx-auto mb-6 rounded-full"
+            class="w-32 h-1.5 bg-linear-to-r from-primary-500 via-secondary-500 to-accent-500 mx-auto mb-6 rounded-full"
             aria-hidden="true"
           ></div>
           <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -261,7 +261,11 @@ const ContactSection = () => {
             <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Send a Message
             </h3>
-            <form class="space-y-6 py-4" aria-label="Contact form">
+            <form
+              id="contact-form"
+              class="space-y-6 py-4"
+              aria-label="Contact form"
+            >
               <!-- Name and Email Fields in one line -->
               <div class="grid grid-cols-2 gap-4">
                 <div class="col-span-2 md:col-span-1">
@@ -301,24 +305,41 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <!-- Subject Field -->
-              <div>
-                <label
-                  for="subject"
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                >
-                  Subject
-                  <span class="text-red-500" aria-hidden="true">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  class="block w-full px-4 py-3 bg-gray-50 dark:bg-dark-700 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50 transition-colors duration-300 text-gray-900 dark:text-white"
-                  placeholder="What's this about?"
-                  aria-required="true"
-                />
+              <!-- Phone and Subject Fields -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2 md:col-span-1">
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="block w-full px-4 py-3 bg-gray-50 dark:bg-dark-700 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50 transition-colors duration-300 text-gray-900 dark:text-white"
+                    placeholder="+880 1234567890"
+                  />
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
+                    Subject
+                    <span class="text-red-500" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    class="block w-full px-4 py-3 bg-gray-50 dark:bg-dark-700 border border-gray-200 dark:border-gray-700 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50 transition-colors duration-300 text-gray-900 dark:text-white"
+                    placeholder="What's this about?"
+                    aria-required="true"
+                  />
+                </div>
               </div>
 
               <!-- Message Field -->
@@ -341,13 +362,18 @@ const ContactSection = () => {
                 ></textarea>
               </div>
 
+              <!-- Error/Success Message -->
+              <div id="form-message" class="hidden"></div>
+
               <!-- Submit Button -->
               <button
                 type="submit"
-                class="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-secondary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                id="submit-btn"
+                class="w-full inline-flex items-center justify-center px-8 py-4 bg-linear-to-r from-primary-500 to-secondary-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-secondary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                <span id="btn-text">Send Message</span>
                 <svg
+                  id="btn-icon"
                   class="w-5 h-5 ml-2"
                   fill="none"
                   stroke="currentColor"
