@@ -4,10 +4,14 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css",
+    "watch:css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
   },
   "dependencies": {
-    "hono": "^4.11.9"
+    "@tailwindcss/cli": "^4.1.18",
+    "hono": "^4.11.9",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "wrangler": "^4.4.0"
