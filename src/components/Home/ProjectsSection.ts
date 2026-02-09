@@ -6,32 +6,21 @@ interface Technology {
   textColor: string;
 }
 
-interface ProjectLink {
-  label: string;
-  url: string;
-  isPrimary: boolean;
-}
-
 interface Project {
+  id: string;
   title: string;
   description: string;
   image: string;
   imageAlt: string;
   gradientColors: string;
   isLive: boolean;
-  links: ProjectLink[];
+  liveUrl?: string;
   technologies: Technology[];
-}
-
-interface BackgroundElement {
-  size: string;
-  position: string;
-  gradient: string;
-  animation: string;
 }
 
 const projects: Project[] = [
   {
+    id: "dishdynamo",
     title: "DishDynamo",
     description:
       "A modern restaurant management system with real-time ordering, menu customization, and user authentication.",
@@ -39,18 +28,7 @@ const projects: Project[] = [
     imageAlt: "Screenshot of DishDynamo Restaurant App",
     gradientColors: "from-primary-500 to-secondary-500",
     isLive: true,
-    links: [
-      {
-        label: "Live Demo",
-        url: "https://dishdynamo-c649f.web.app",
-        isPrimary: true,
-      },
-      {
-        label: "GitHub",
-        url: "https://github.com/shahinali-dev/Dish-Dynamo-Client",
-        isPrimary: false,
-      },
-    ],
+    liveUrl: "https://dishdynamo-c649f.web.app",
     technologies: [
       {
         name: "React",
@@ -75,6 +53,7 @@ const projects: Project[] = [
     ],
   },
   {
+    id: "contesthub",
     title: "ContestHub",
     description:
       "A contest management platform with real-time updates, secure payments, and multiple user roles.",
@@ -82,18 +61,7 @@ const projects: Project[] = [
     imageAlt: "Screenshot of ContestHub Platform",
     gradientColors: "from-secondary-500 to-accent-500",
     isLive: true,
-    links: [
-      {
-        label: "Live Demo",
-        url: "https://contesthub-e5119.web.app",
-        isPrimary: true,
-      },
-      {
-        label: "GitHub",
-        url: "https://github.com/shahinali-dev/Contest-Hub-Client",
-        isPrimary: false,
-      },
-    ],
+    liveUrl: "https://contesthub-e5119.web.app",
     technologies: [
       {
         name: "React",
@@ -118,6 +86,7 @@ const projects: Project[] = [
     ],
   },
   {
+    id: "codebuysell",
     title: "CodeBuySell",
     description:
       "A marketplace for developers to buy and sell code snippets, templates, and digital assets.",
@@ -125,18 +94,7 @@ const projects: Project[] = [
     imageAlt: "Screenshot of CodeBuySell Marketplace",
     gradientColors: "from-accent-500 to-primary-500",
     isLive: true,
-    links: [
-      {
-        label: "Live Demo",
-        url: "https://codebuysell.com",
-        isPrimary: true,
-      },
-      {
-        label: "GitHub",
-        url: "https://github.com/shahinali-dev/Code-BuySell-Frontend",
-        isPrimary: false,
-      },
-    ],
+    liveUrl: "https://codebuysell.com",
     technologies: [
       {
         name: "Next.js",
@@ -162,21 +120,6 @@ const projects: Project[] = [
   },
 ];
 
-const backgroundElements: BackgroundElement[] = [
-  {
-    size: "w-24 h-24",
-    position: "top-20 left-20",
-    gradient: "from-primary-200/20 to-secondary-200/20",
-    animation: "animate-pulse",
-  },
-  {
-    size: "w-32 h-32",
-    position: "bottom-20 right-20",
-    gradient: "from-accent-200/20 to-primary-200/20",
-    animation: "animate-float",
-  },
-];
-
 const renderProjectCard = (project: Project) => {
   return html`
     <article
@@ -189,56 +132,36 @@ const renderProjectCard = (project: Project) => {
           class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
           loading="lazy"
         />
-        <figcaption
-          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <div class="absolute bottom-0 left-0 right-0 p-6">
-            <nav
-              class="flex space-x-4 justify-center"
-              aria-label="${project.title} links"
-            >
-              ${project.links.map(
-                (link) => html`
-                  <a
-                    href="${link.url}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="px-6 py-3 ${link.isPrimary
-                      ? "bg-white/90 backdrop-blur-sm text-gray-900 hover:bg-white"
-                      : "bg-gray-900/90 backdrop-blur-sm text-white hover:bg-gray-900"} rounded-xl font-semibold transition-colors"
-                  >
-                    ${link.label}
-                  </a>
-                `,
-              )}
-            </nav>
-          </div>
-        </figcaption>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+        ></div>
+        ${project.isLive
+          ? html`
+              <span
+                class="absolute top-4 right-4 flex items-center px-3 py-1 bg-green-500/90 backdrop-blur-sm rounded-full"
+              >
+                <span
+                  class="w-2 h-2 bg-white rounded-full animate-pulse mr-2"
+                  aria-hidden="true"
+                ></span>
+                <span class="text-xs font-semibold text-white">Live</span>
+              </span>
+            `
+          : ""}
       </figure>
       <div class="p-6">
-        <header class="flex items-center justify-between mb-3">
+        <header class="mb-3">
           <h3
             class="text-xl font-bold bg-gradient-to-r ${project.gradientColors} bg-clip-text text-transparent"
           >
             ${project.title}
           </h3>
-          ${project.isLive
-            ? html`
-                <span class="flex items-center">
-                  <span
-                    class="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="text-sm text-green-500">Live</span>
-                </span>
-              `
-            : ""}
         </header>
         <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
           ${project.description}
         </p>
         <footer
-          class="flex flex-wrap gap-2 mb-4"
+          class="flex flex-wrap gap-2 mb-6"
           aria-label="Technologies used"
         >
           ${project.technologies.map(
@@ -250,6 +173,53 @@ const renderProjectCard = (project: Project) => {
             `,
           )}
         </footer>
+
+        <!-- Action Buttons -->
+        <nav
+          class="flex flex-col sm:flex-row gap-3"
+          aria-label="${project.title} actions"
+        >
+          ${project.liveUrl
+            ? html`
+                <a
+                  href="${project.liveUrl}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r ${project.gradientColors} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    ${raw(
+                      `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>`,
+                    )}
+                  </svg>
+                  <span>Live Link</span>
+                </a>
+              `
+            : ""}
+          <a
+            href="/projects/${project.id}"
+            class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-dark-700 text-gray-900 dark:text-white rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-dark-600 transition-all duration-300 border border-gray-200 dark:border-gray-600"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              ${raw(
+                `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>`,
+              )}
+            </svg>
+            <span>View Details</span>
+          </a>
+        </nav>
       </div>
     </article>
   `;
@@ -264,13 +234,13 @@ const ProjectsSection = () => {
     >
       <!-- Background Elements -->
       <div class="absolute inset-0" aria-hidden="true">
-        ${backgroundElements.map(
-          (element) => html`
-            <div
-              class="absolute ${element.position} ${element.size} bg-gradient-to-r ${element.gradient} rounded-full blur-2xl ${element.animation}"
-            ></div>
-          `,
-        )}
+        <div
+          class="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-full blur-3xl animate-float"
+        ></div>
+        <div
+          class="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-secondary-500/10 to-accent-500/10 rounded-full blur-3xl animate-float"
+          style="animation-delay: 2s"
+        ></div>
       </div>
 
       <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -301,10 +271,10 @@ const ProjectsSection = () => {
           ${projects.map((project) => renderProjectCard(project))}
         </section>
 
-        <!-- View More Projects Button -->
+        <!-- View All Projects Button -->
         <div class="text-center mt-12 scroll-reveal">
           <a
-            href="#"
+            href="/projects"
             class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-2xl font-semibold hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             aria-label="View all projects"
           >

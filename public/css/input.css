@@ -197,6 +197,35 @@
     max-width: 1152px;
     margin: 0 auto;
   }
+
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
 }
 
 @layer components {
@@ -267,7 +296,9 @@
     overflow: hidden;
     border-right: 3px solid #0ea5e9;
     white-space: nowrap;
-    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation:
+      typing 3s steps(40, end),
+      blink-caret 0.75s step-end infinite;
   }
 
   /* Parallax Effects */
@@ -290,7 +321,8 @@
 
   /* Hero Pattern */
   .hero-pattern {
-    background-image: radial-gradient(
+    background-image:
+      radial-gradient(
         circle at 25% 25%,
         rgba(99, 102, 241, 0.1) 0%,
         transparent 50%
@@ -427,14 +459,14 @@
     left: 100%;
   }
 
-  .animated-card{
+  .animated-card {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
   }
 
-   .animated-card::before {
+  .animated-card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -590,11 +622,8 @@
   }
 
   .bg-grid-pattern {
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.1) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
   }
