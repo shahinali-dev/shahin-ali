@@ -1,5 +1,6 @@
 import { html } from "hono/html";
 import AboutSection from "../components/Home/AboutSection";
+import BlogSection from "../components/Home/BlogSection";
 import ContactSection from "../components/Home/ContactSection";
 import EducationSection from "../components/Home/EducationSection";
 import ExperienceSection from "../components/Home/ExperienceSection";
@@ -10,7 +11,7 @@ import SkillsSection from "../components/Home/SkillsSection";
 const Home = (props?: any) => html`
   ${HeroSection()} ${AboutSection()} ${EducationSection()}
   ${ExperienceSection()} ${SkillsSection()} ${ProjectsSection()}
-  ${ContactSection()}
+  ${BlogSection()} ${ContactSection()}
 `;
 
 export default Home;
