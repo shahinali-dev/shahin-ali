@@ -289,7 +289,7 @@ const RootLayout = (props: RootLayoutProps) => html`
       <header>${Navbar({ currentPage: props.currentPage })}</header>
 
       <!-- Main Content -->
-      <main id="main-content">${props.children}</main>
+      <main id="main-content" role="main">${props.children}</main>
 
       <!-- Footer -->
       ${Footer()}
