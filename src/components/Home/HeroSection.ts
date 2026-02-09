@@ -70,7 +70,7 @@ const HeroSection = () => {
     <!-- Hero Section -->
     <section
       id="home"
-      class="min-h-screen relative overflow-hidden dark:bg-gradient-to-br dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 light:bg-gradient-to-br light:from-blue-50 light:via-indigo-100 light:to-purple-100 transition-all duration-300"
+      class="min-h-screen relative overflow-hidden dark:bg-linear-to-br dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 light:bg-gradient-to-br light:from-blue-50 light:via-indigo-100 light:to-purple-100 transition-all duration-300"
       aria-labelledby="hero-heading"
     >
       <!-- Animated Background Pattern -->
@@ -79,14 +79,14 @@ const HeroSection = () => {
       <!-- Floating Elements -->
       <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
         <div
-          class="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-full blur-3xl animate-float"
+          class="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-linear-to-r from-primary-500/20 to-secondary-500/20 rounded-full blur-3xl animate-float"
         ></div>
         <div
-          class="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-secondary-500/20 to-accent-500/20 rounded-full blur-3xl animate-float"
+          class="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-linear-to-r from-secondary-500/20 to-accent-500/20 rounded-full blur-3xl animate-float"
           style="animation-delay: 2s"
         ></div>
         <div
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-r from-accent-500/20 to-primary-500/20 rounded-full blur-3xl animate-pulse-slow"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 bg-linear-to-r from-accent-500/20 to-primary-500/20 rounded-full blur-3xl animate-pulse-slow"
         ></div>
       </div>
 
@@ -234,13 +234,13 @@ const HeroSection = () => {
                 <!-- Explore My Work -->
                 <a
                   href="#projects"
-                  class="group relative px-4 sm:px-6 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-center focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-gradient-to-r dark:from-primary-500 dark:to-secondary-500 bg-gradient-to-r from-indigo-600 to-purple-600"
+                  class="group relative px-4 sm:px-6 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-center focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-linear-to-r dark:from-primary-500 dark:to-secondary-500 bg-linear-to-r from-indigo-600 to-purple-600"
                 >
                   <span class="relative z-10 lg:text-sm xl:text-base"
                     >Explore My Work</span
                   >
                   <div
-                    class="absolute inset-0 bg-gradient-to-r from-primary-600 to-secondary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    class="absolute inset-0 bg-linear-to-r from-primary-600 to-secondary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   ></div>
                 </a>
 
@@ -318,7 +318,7 @@ const HeroSection = () => {
               <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <!-- Rotating Border -->
                 <div
-                  class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 animate-spin"
+                  class="absolute inset-0 rounded-full bg-linear-to-r from-primary-500 via-secondary-500 to-accent-500 animate-spin"
                   style="animation-duration: 10s"
                   aria-hidden="true"
                 ></div>
@@ -340,14 +340,14 @@ const HeroSection = () => {
 
                 <!-- Floating Tech Icons -->
                 <div
-                  class="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-base sm:text-xl animate-float shadow-lg"
+                  class="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-linear-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-base sm:text-xl animate-float shadow-lg"
                   aria-label="JavaScript"
                   role="img"
                 >
                   JS
                 </div>
                 <div
-                  class="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center text-white font-bold text-base sm:text-xl animate-float shadow-lg"
+                  class="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-linear-to-r from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center text-white font-bold text-base sm:text-xl animate-float shadow-lg"
                   style="animation-delay: 1s"
                   aria-label="React"
                   role="img"
@@ -355,7 +355,7 @@ const HeroSection = () => {
                   ⚛️
                 </div>
                 <div
-                  class="absolute top-1/2 -right-4 sm:-right-6 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base animate-bounce-slow shadow-lg"
+                  class="absolute top-1/2 -right-4 sm:-right-6 w-10 h-10 sm:w-12 sm:h-12 bg-linear-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base animate-bounce-slow shadow-lg"
                   aria-label="TypeScript"
                   role="img"
                 >
@@ -364,7 +364,7 @@ const HeroSection = () => {
 
                 <!-- Currently Working At Badge -->
                 <div
-                  class="absolute -bottom-4 sm:-bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-600 px-3 sm:px-6 py-2 sm:py-3 rounded-full shadow-xl"
+                  class="absolute -bottom-4 sm:-bottom-6 left-1/2 transform -translate-x-1/2 bg-linear-to-r from-purple-600 to-pink-600 px-3 sm:px-6 py-2 sm:py-3 rounded-full shadow-xl"
                 >
                   <div class="text-center">
                     <div class="text-xs text-purple-200 mb-1">Currently at</div>

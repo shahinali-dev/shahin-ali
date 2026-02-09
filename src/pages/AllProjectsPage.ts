@@ -5,7 +5,7 @@ const AllProjectsPage = () => {
   return html`
     <!-- Hero Section -->
     <section
-      class="py-20 bg-linear-to-br from-primary-500 via-secondary-500 to-accent-500 relative overflow-hidden"
+      class="py-20 bg-linear-to-br from-primary-500 via-secondary-500 to-accent-500 relative overflow-hidden mt-20"
     >
       <!-- Background Pattern -->
       <div class="absolute inset-0 hero-pattern opacity-20"></div>
@@ -58,7 +58,7 @@ const AllProjectsPage = () => {
                     loading="lazy"
                   />
                   <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                    class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"
                   ></div>
                   ${project.isLive
                     ? html`
@@ -78,7 +78,7 @@ const AllProjectsPage = () => {
                 <div class="p-6">
                   <header class="mb-3">
                     <h3
-                      class="text-xl font-bold bg-gradient-to-r ${project.gradientColors} bg-clip-text text-transparent"
+                      class="text-xl font-bold bg-linear-to-r ${project.gradientColors} bg-clip-text text-transparent"
                     >
                       ${project.title}
                     </h3>
@@ -120,7 +120,7 @@ const AllProjectsPage = () => {
                             href="${project.liveUrl}"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r ${project.gradientColors} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+                            class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-linear-to-r ${project.gradientColors} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
                           >
                             <svg
                               class="w-4 h-4"

@@ -37,7 +37,7 @@ export const projectsData: ProjectDetail[] = [
       "A modern restaurant management system with real-time ordering, menu customization, and user authentication.",
     fullDescription:
       "DishDynamo is a comprehensive restaurant management solution that streamlines the entire dining experience. From order placement to payment processing, this platform provides restaurants with powerful tools to manage their operations efficiently while offering customers a seamless ordering experience.",
-    image: "./images/dish-dynamo-home.png",
+    image: "/images/dish-dynamo.png",
     imageAlt: "Screenshot of DishDynamo Restaurant App",
     gradientColors: "from-primary-500 to-secondary-500",
     isLive: true,
@@ -127,7 +127,7 @@ export const projectsData: ProjectDetail[] = [
       "A contest management platform with real-time updates, secure payments, and multiple user roles.",
     fullDescription:
       "ContestHub is a comprehensive platform designed to streamline the organization and participation in various contests and competitions. The platform supports multiple user roles including participants, organizers, and administrators, each with their own tailored interface and capabilities.",
-    image: "./images/contest-hub.png",
+    image: "/images/contest-hub.png",
     imageAlt: "Screenshot of ContestHub Platform",
     gradientColors: "from-secondary-500 to-accent-500",
     isLive: true,
@@ -217,7 +217,7 @@ export const projectsData: ProjectDetail[] = [
       "A marketplace for developers to buy and sell code snippets, templates, and digital assets.",
     fullDescription:
       "CodeBuySell is a specialized marketplace that connects developers who create reusable code components with those who need them. The platform facilitates the buying and selling of code snippets, templates, UI components, and other digital development assets, creating a thriving ecosystem for code commerce.",
-    image: "./images/code-buysell.png",
+    image: "/images/code-buysell.png",
     imageAlt: "Screenshot of CodeBuySell Marketplace",
     gradientColors: "from-accent-500 to-primary-500",
     isLive: true,

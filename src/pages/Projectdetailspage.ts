@@ -9,7 +9,7 @@ const ProjectDetailsPage = ({ project }: ProjectDetailsPageProps) => {
   return html`
     <!-- Hero Section -->
     <section
-      class="py-20 bg-gradient-to-br ${project.gradientColors} relative overflow-hidden"
+      class="py-20 bg-lmnear-to-br ${project.gradientColors} relative overflow-hidden mt-10"
     >
       <!-- Background Pattern -->
       <div class="absolute inset-0 hero-pattern opacity-20"></div>
