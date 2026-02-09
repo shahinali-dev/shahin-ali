@@ -18,6 +18,11 @@ const navLinks: NavLink[] = [
     label: "Experience",
     ariaLabel: "Navigate to Experience section",
   },
+  {
+    href: "#education",
+    label: "Education",
+    ariaLabel: "Navigate to Education section",
+  },
   { href: "#skills", label: "Skills", ariaLabel: "Navigate to Skills section" },
   {
     href: "#projects",
