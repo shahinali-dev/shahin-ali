@@ -2,7 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "shahin-ali",
   "main": "src/index.ts",
-  "compatibility_date": "2026-02-09"
+  "compatibility_date": "2026-02-09",
+  "assets": {
+    "directory": "./public",
+  },
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
