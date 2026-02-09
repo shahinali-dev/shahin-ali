@@ -1,4 +1,4 @@
-import { html } from "hono/html";
+import { html, raw } from "hono/html";
 
 interface TechIcon {
   name: string;
@@ -21,17 +21,17 @@ interface HeroStats {
 
 const coreTechnologies: TechIcon[] = [
   { name: "React", icon: "fab fa-react", color: "#61DAFB" },
-  { name: "Next.js", icon: "/assets/icons/next-js.svg", color: "" },
+  { name: "Next.js", icon: "/icons/next-js.svg", color: "" },
   { name: "JavaScript", icon: "fab fa-js-square", color: "#F7DF1E" },
   { name: "Node.js", icon: "fab fa-node-js", color: "#339933" },
-  { name: "TypeScript", icon: "/assets/icons/typescript.svg", color: "" },
+  { name: "TypeScript", icon: "/icons/typescript.svg", color: "" },
   { name: "MongoDB", icon: "fa-solid fa-leaf", color: "text-green-400" },
-  { name: "PostgreSQL", icon: "/assets/icons/postgresql.svg", color: "" },
+  { name: "PostgreSQL", icon: "/icons/postgresql.svg", color: "" },
 ];
 
 const stats: HeroStats[] = [
   {
-    value: "1.5+",
+    value: "2+",
     label: "Years Experience",
     color: "text-primary-400 light:text-primary-600",
   },
@@ -150,7 +150,7 @@ const HeroSection = () => {
                   Full Stack Developer with
                   <span
                     class="text-primary-400 light:text-primary-600 font-semibold"
-                    >1.5+ years</span
+                    >2+ years</span
                   >
                   of experience specializing in React, Next.js, TypeScript,
                   Node.js, Express, NestJS, PostgreSQL, and MongoDB. Specialized
@@ -254,7 +254,7 @@ const HeroSection = () => {
 
                 <!-- View Resume -->
                 <a
-                  href="/assets/resume/Shahin ali.pdf"
+                  href="/resume/Shahin ali.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="group px-4 sm:px-6 py-3 rounded-xl font-semibold bg-transparent dark:text-white text-gray-800 border border-gray-300 hover:border-gray-400/70 transition-all duration-300 hover:scale-105 dark:hover:bg-white/10 hover:bg-gray-200/20 text-center focus:outline-none focus:ring-4 focus:ring-gray-300 dark:focus:ring-white/20 lg:text-sm xl:text-base"
@@ -288,7 +288,7 @@ const HeroSection = () => {
                         viewBox="0 0 24 24"
                         aria-hidden="true"
                       >
-                        ${link.icon}
+                        ${raw(link.icon)}
                       </svg>
                     </a>
                   `,
@@ -331,7 +331,7 @@ const HeroSection = () => {
                   class="absolute inset-3 sm:inset-4 rounded-full overflow-hidden border-2 sm:border-4 border-white/20 light:border-gray-200/50"
                 >
                   <img
-                    src="/assets/images/shahin-ali.jpeg"
+                    src="/images/shahin-ali.jpeg"
                     alt="Shahin Ali - Full Stack Developer"
                     class="w-full h-full object-cover object-center"
                     loading="lazy"
